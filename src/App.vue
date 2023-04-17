@@ -2,6 +2,7 @@
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import ButtonComponent from './components/ButtonComponent.vue'
+import IphoneImage from './components/IphoneImage.vue'
 </script>
 
 <template>

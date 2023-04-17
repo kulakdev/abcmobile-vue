@@ -1,27 +1,17 @@
 <template>
   <div class="image-container">
-    <img :src="imageUrl" class="centered-image" />
+    <img src="src/assets/backgroundImage.webp" class="centered-image" />
   </div>
 </template>
 
-<script lang="ts">
-export default {
-  name: 'CenteredImage',
-  props: {
-    imageUrl: {
-      type: String,
-      required: true
-    }
-  }
-}
-</script>
-
 <style>
 .image-container {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100vh;
 }
 
 .centered-image {
