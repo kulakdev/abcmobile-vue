@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import ButtonComponent from './components/ButtonComponent.vue'
+import NavBar from './components/NavBar.vue'
 </script>
 
 <template>
@@ -7,7 +8,7 @@ import ButtonComponent from './components/ButtonComponent.vue'
     <ButtonComponent text="ДАЛЕЕ" />
     <div class="phone">
       <div class="card">
-        <Nav />
+        <NavBar />
       </div>
     </div>
   </div>
