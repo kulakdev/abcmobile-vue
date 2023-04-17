@@ -17,7 +17,9 @@ import IphoneImage from './components/IphoneImage.vue'
   padding: 0;
   width: 100vw;
   height: 100vh;
-  background-color: darkcyan;
+
+  background-image: url('src/assets/ventura.jpg');
+  background-size: cover;
 }
 
 .phone {
@@ -29,18 +31,19 @@ import IphoneImage from './components/IphoneImage.vue'
   left: 50%;
   transform: translate(-50%, -50%);
 
-  background-color: blue;
+  background-image: url('src/assets/phone.png');
 }
 .card {
   left: 27px;
   top: 93px;
   height: 569px;
   width: 320px;
-  background-color: black;
+
   overflow-y: scroll;
+  background-color: greenyellow;
 }
 .card::-webkit-scrollbar {
-  width: 1em;
+  width: 1px;
 }
 
 .card::-webkit-scrollbar-track {
