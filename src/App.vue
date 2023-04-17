@@ -1,13 +1,14 @@
 <script setup lang="ts">
 import ButtonComponent from './components/ButtonComponent.vue'
-import IphoneImage from './components/IphoneImage.vue'
 </script>
 
 <template>
   <div class="wrapper">
     <ButtonComponent text="ДАЛЕЕ" />
     <div class="phone">
-      <div class="card"></div>
+      <div class="card">
+        <Nav />
+      </div>
     </div>
   </div>
 </template>
