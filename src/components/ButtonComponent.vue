@@ -1,6 +1,19 @@
+<script lang="ts">
+export default {
+  name: 'ButtonComponent',
+  props: {
+    text: {
+      type: String,
+      required: true
+    }
+  }
+}
+</script>
+
 <template>
-  <button class="buttonStyle" role="button">ДАЛЕЕ</button>
+  <button class="buttonStyle" role="button">{{ text }}</button>
 </template>
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap');
 .buttonStyle {

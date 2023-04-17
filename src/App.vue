@@ -5,10 +5,8 @@ import IphoneImage from './components/IphoneImage.vue'
 
 <template>
   <div class="wrapper">
-    <div class="card">
-      <!-- <IphoneImage /> -->
-      <ButtonComponent />
-    </div>
+    <ButtonComponent text="ДАЛЕЕ" />
+    <div class="card"></div>
   </div>
 </template>
 
