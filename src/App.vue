@@ -41,7 +41,9 @@ import NavBar from './components/Navbar.vue'
   width: 100%;
   height: 100%;
   overflow-y: scroll;
-  background-color: greenyellow;
+
+  background-size: contain;
+  background-image: url('src/assets/space.webp') !important;
 }
 
 @media (min-width: 576px) {

@@ -36,7 +36,7 @@ export default {
 }
 .icon {
   width: 24px;
-  height: 1rem !important;
-  background-color: aquamarine;
+  height: 1mm;
+  background-color: #696969;
 }
 </style>
