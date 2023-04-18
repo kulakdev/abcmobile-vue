@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="landing">
-      <p style="text1">Пройдите точный и быстрый</p>
+      <p class="text1">Пройдите точный и быстрый</p>
     </div>
   </div>
 </template>
@@ -13,7 +13,7 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=PT+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Yeseva+One&display=swap');
 .landing {
   width: 100%;
   height: 100vh;
@@ -22,6 +22,19 @@ export default {
 }
 
 .text1 {
-  font-family: PT-Serif;
+  width: 100%;
+
+  top: 27px;
+
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  color: #fff;
 }
 </style>
