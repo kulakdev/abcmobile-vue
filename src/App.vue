@@ -5,7 +5,7 @@ import NavBar from './components/Navbar.vue'
 
 <template>
   <div class="wrapper">
-    <ButtonComponent text="ДАЛЕЕ" />
+    <!-- <ButtonComponent text="ДАЛЕЕ" /> -->
     <div class="phone">
       <div class="card">
         <NavBar />
@@ -37,7 +37,9 @@ import NavBar from './components/Navbar.vue'
 }
 
 .card {
-  max-width: 320px;
+  top: 46px;
+  width: 100%;
+  height: 100%;
   overflow-y: scroll;
   background-color: greenyellow;
 }

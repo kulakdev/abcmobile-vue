@@ -28,7 +28,14 @@ export default {
 .button {
   width: 24px;
   height: 16px;
+  justify-content: space-between;
 
+  padding-left: 15px;
+  padding-top: 17px;
+}
+.icon {
+  width: 24px;
+  height: 2.67px !important;
   background-color: aquamarine;
 }
 </style>
