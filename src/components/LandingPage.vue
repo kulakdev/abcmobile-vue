@@ -144,7 +144,7 @@ export default {
 @media (min-width: 576px) {
   .landing {
     width: 100%;
-    height: 570px;
+    height: 571px;
     background-image: url('src/assets/space.webp') !important;
     justify-content: space-between;
     display: flex;

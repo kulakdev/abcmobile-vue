@@ -13,7 +13,7 @@
     <div class="buttonTransparent">
       <ButtonTransparent text="ПРОЙТИ ТЕСТ" />
     </div>
-    <div>© 2023 :P</div>
+    <div class="copyright">© 2023 :P</div>
   </div>
 </template>
 
@@ -84,9 +84,23 @@ export default {
   background: rgba(243, 243, 242, 0.8);
   border-radius: 20px;
 }
+
+.copyright {
+  width: max-content;
+  margin: 13px auto;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 23px;
+
+  text-align: center;
+  letter-spacing: 0.05em;
+}
 @media (min-width: 576px) {
   .screenThree {
-    height: 570px;
+    height: 571px;
   }
 }
 </style>
