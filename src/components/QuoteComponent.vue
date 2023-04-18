@@ -67,4 +67,10 @@ export default {
 
   color: #ffffff;
 }
+
+.quote1 {
+}
+
+.quote2 {
+}
 </style>
