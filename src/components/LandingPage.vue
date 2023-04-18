@@ -47,37 +47,6 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Yeseva+One&display=swap');
 
-.imageContainer {
-  margin-left: auto;
-  margin-right: auto;
-  width: 170px;
-  height: 150px;
-}
-.imageStyle {
-  position: absolute;
-  background-image: url('src/assets/brain.webp');
-
-  background-size: contain;
-  width: 170px;
-  height: 150px;
-}
-.blurryBg {
-  position: absolute;
-  background-image: url('src/assets/brain.webp');
-
-  background-size: contain;
-  width: 170px;
-  height: 150px;
-  justify-self: flex-end;
-  filter: blur(20px);
-  -webkit-filter: blur(20px);
-}
-.buttonStyle {
-  margin-top: 20px;
-  position: relative;
-  margin: initial auto;
-  align-self: center;
-}
 .landing {
   width: 100%;
   height: 100vh;
@@ -88,44 +57,6 @@ export default {
   flex-direction: column;
 }
 
-h2 {
-  font-family: 'PT Serif';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 19px;
-
-  text-align: center;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-
-  color: #ffc700;
-}
-
-h1 {
-  display: block;
-  font-family: 'Yeseva One';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 35px;
-  text-align: center;
-  text-transform: uppercase;
-  margin: initial 20px;
-  margin-top: 40px;
-
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.anchor {
-  width: 100%;
-  height: 54px;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  color: #fff;
-}
 .text1 {
   display: block;
 
@@ -143,6 +74,80 @@ h1 {
   text-transform: uppercase;
 
   color: #fff;
+}
+.imageContainer {
+  margin-left: auto;
+  margin-right: auto;
+  width: 170px;
+  height: 150px;
+}
+
+.blurryBg {
+  position: absolute;
+  background-image: url('src/assets/brain.webp');
+
+  background-size: contain;
+  width: 170px;
+  height: 150px;
+  justify-self: flex-end;
+  filter: blur(20px);
+  -webkit-filter: blur(20px);
+}
+.imageStyle {
+  position: absolute;
+  background-image: url('src/assets/brain.webp');
+
+  background-size: contain;
+  width: 170px;
+  height: 150px;
+}
+
+.buttonStyle {
+  margin-top: 20px;
+  position: relative;
+  margin: initial auto;
+  align-self: center;
+}
+.anchor {
+  width: 100%;
+  height: 54px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+/* These are REUSABLE MINI-CLASSES or styling for DEFAULT HTML COMPONENTS */
+
+h1 {
+  display: block;
+  font-family: 'Yeseva One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: initial 20px;
+  margin-top: 40px;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+h2 {
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 19px;
+
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  color: #ffc700;
 }
 
 .gold {
