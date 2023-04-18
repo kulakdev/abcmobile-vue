@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import ButtonComponent from './components/ButtonComponent.vue'
 import NavBar from './components/Navbar.vue'
+import LandingPage from './components/LandingPage.vue'
 </script>
 
 <template>
@@ -9,6 +10,7 @@ import NavBar from './components/Navbar.vue'
     <div class="phone">
       <div class="card">
         <NavBar />
+        <LangingPage />
       </div>
     </div>
   </div>
@@ -18,7 +20,6 @@ import NavBar from './components/Navbar.vue'
 .wrapper {
   padding: 0;
   width: 100vw;
-  height: 100vh;
 
   background-image: none;
   background-size: cover;
