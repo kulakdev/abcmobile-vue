@@ -10,7 +10,6 @@ import LandingPage from './components/LandingPage.vue'
     <div class="phone">
       <div class="card">
         <NavBar />
-        <LangingPage />
       </div>
     </div>
   </div>
@@ -20,27 +19,23 @@ import LandingPage from './components/LandingPage.vue'
 .wrapper {
   padding: 0;
   width: 100vw;
+  height: 100%;
 
   background-image: none;
   background-size: cover;
 }
 
 .phone {
-  width: 372px;
-  height: 753px;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: auto;
+  height: inherit;
 
   background-image: none;
 }
 
 .card {
   top: 46px;
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: inherit;
   overflow-y: scroll;
 
   background-size: contain;
@@ -49,9 +44,20 @@ import LandingPage from './components/LandingPage.vue'
 
 @media (min-width: 576px) {
   .wrapper {
+    padding: 0;
+    width: 100vw;
+    height: 100%;
+
     background-image: url('src/assets/ventura.jpg');
+    background-size: cover;
   }
   .phone {
+    width: 372px;
+    height: 753px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-image: url('src/assets/phone.png');
   }
 

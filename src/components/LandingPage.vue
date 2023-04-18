@@ -10,7 +10,8 @@ export default {}
 
 <style scoped>
 .landing {
-  height: 100vh;
+  height: 100%;
+  width: 100%;
   background-color: yellow;
 }
 </style>
