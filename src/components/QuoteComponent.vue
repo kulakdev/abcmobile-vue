@@ -1,6 +1,7 @@
 <template>
-  <div class="voidImage"/>
-    <div class="blueBlob"></div>
+  <div>
+    <div class="voidImage" />
+    <div class="blueBlob" />
   </div>
 </template>
 
