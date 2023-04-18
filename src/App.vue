@@ -11,7 +11,17 @@ import LandingPage from './components/LandingPage.vue'
       <div class="card">
         <NavBar />
         <LandingPage />
-        <p>sdfasdfjhaslkjdfhaskldj</p>
+        <p>
+          sdfasdfjhaslkjdfhaskldjTESTTESTTESTETESTTESTTES
+          TETTESTTESTTESTETESTTESTTESTETTESTTESTTESTETEST
+          TESTTESTETTESTTESTTESTETESTTESTTESTETTESTTESTTE
+          STETESTTESTTESTETTESTTESTTESTETESTTESTTESTETTES
+          TTESTTESTETESTTESTTESTETTESTTESTTESTETESTTESTTE
+          STETTESTTESTTESTETESTTESTTESTETTESTTESTTESTETES
+          TTESTTESTETTESTTESTTESTETESTTESTTESTETTESTTESTT
+          ESTETESTTESTTESTETTESTTESTTESTETESTTESTTESTETTE
+          STTESTTESTETESTTESTTESTETTESTTESTTESTETESTTESTTESTET
+        </p>
       </div>
     </div>
   </div>
@@ -21,7 +31,7 @@ import LandingPage from './components/LandingPage.vue'
 .wrapper {
   padding: 0;
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   background-image: none;
   background-size: cover;
 }
@@ -37,6 +47,7 @@ import LandingPage from './components/LandingPage.vue'
   width: auto;
   height: inherit;
   overflow-y: scroll;
+  overflow-x: hidden;
 
   background-size: contain;
   background-color: chartreuse;

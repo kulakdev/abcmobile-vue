@@ -5,6 +5,10 @@ export default {
     text: {
       type: String,
       required: true
+    },
+    class: {
+      type: String,
+      required: false
     }
   }
 }
@@ -17,7 +21,6 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap');
 .buttonStyle {
-  position: absolute;
   width: 189px;
   height: 41px;
   background: radial-gradient(50% 50% at 50% 50%, #ffc700 0%, #ffc700 100%);
