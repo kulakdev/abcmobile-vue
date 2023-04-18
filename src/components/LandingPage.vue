@@ -50,7 +50,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Yeseva+One&display=swap');
 
 .landing {
-  padding: 46px;
+  padding-top: 46px;
   width: 100%;
   height: 100vh;
   background-image: url('src/assets/space.webp') !important;
