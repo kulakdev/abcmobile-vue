@@ -1,10 +1,12 @@
 <template>
   <div class="secondScreen">
     <p class="text">
-      Также по результатам теста <span class="bold">вы получите</span> подробные
-      <span class="bold">советы</span> по определению наиболее перспективной
-      <span class="bold">для вашего типа интеллекта сферы деятельности</span>, которая принесет вам
-      скорейший финансовый результат.
+      Также по результатам теста<span style="display: block">
+        <span class="bold">вы получите</span> подробные <span class="bold">советы</span> по
+        определению наиболее перспективной
+        <span class="bold">для вашего типа интеллекта сферы деятельности</span>,</span
+      >
+      которая принесет вам скорейший финансовый результат.
     </p>
     <img class="imageElement" src="src/assets/brains.webp" />
     <ButtonComponent text="ПРОЙТИ ТЕСТ" />
