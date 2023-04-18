@@ -2,6 +2,7 @@
   <div>
     <div class="landing">
       <p class="text1">Пройдите точный и быстрый</p>
+      <h1>ТЕСТ НА ОПРЕДЕЛЕНИЕ IQ</h1>
     </div>
   </div>
 </template>
@@ -21,6 +22,19 @@ export default {
   background-image: url('src/assets/space.webp') !important;
 }
 
+h1 {
+  font-family: 'Yeseva One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #ffc700;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 .text1 {
   width: 100%;
 
