@@ -127,6 +127,14 @@ export default {
 }
 
 .anchorText {
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 11px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 /* These are REUSABLE MINI-CLASSES or styling for DEFAULT HTML COMPONENTS */
