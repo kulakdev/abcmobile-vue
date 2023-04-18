@@ -50,7 +50,7 @@ import QuoteComponent from './components/QuoteComponent.vue'
   overflow-x: hidden;
 
   background-size: contain;
-  background-color: chartreuse;
+  background-color: grey;
 }
 
 @media (min-width: 576px) {
@@ -80,7 +80,7 @@ import QuoteComponent from './components/QuoteComponent.vue'
     width: 320px;
 
     overflow-y: scroll;
-    background-color: greenyellow;
+    background-color: grey;
   }
 }
 

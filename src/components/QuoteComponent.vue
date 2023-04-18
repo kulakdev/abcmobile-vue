@@ -2,6 +2,10 @@
   <div class="voidWrapper">
     <div class="voidImage" />
     <div class="blueBlob" />
+    <p class="voidText white">
+      Профессиональный IQ-тест позволяет не только определить коэффициент вашего интеллекта, но и
+      выработать список рекомендаций для повышения этого показателя.
+    </p>
   </div>
 </template>
 
@@ -15,6 +19,8 @@ export default {
 .voidWrapper {
   width: 100%;
   height: 339px;
+  justify-content: center;
+  align-content: center;
 }
 
 .voidImage {
@@ -37,5 +43,20 @@ export default {
     rgba(38, 91, 199, 0.96) 40.62%,
     rgba(39, 98, 187, 0) 85.42%
   );
+}
+
+.voidText {
+  padding: 69px 36px;
+  font-family: 'Yeseva One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  /* or 128% */
+
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #ffffff;
 }
 </style>
