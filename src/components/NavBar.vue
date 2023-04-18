@@ -32,9 +32,6 @@ export default {
   height: 16px;
   margin-left: 15px;
   margin-top: 17px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 .icon {
   width: 24px;
