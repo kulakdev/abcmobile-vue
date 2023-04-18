@@ -20,20 +20,18 @@ import LandingPage from './components/LandingPage.vue'
   padding: 0;
   width: 100vw;
   height: 100%;
-
   background-image: none;
   background-size: cover;
 }
 
 .phone {
-  width: auto;
+  width: inherit;
   height: inherit;
-
   background-image: none;
 }
 
 .card {
-  top: 46px;
+  top: 0px;
   width: auto;
   height: inherit;
   overflow-y: scroll;
