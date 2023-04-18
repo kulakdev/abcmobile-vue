@@ -10,18 +10,18 @@ export default {
 <template>
   <div>
     <div class="landing">
-      <p class="text1 white">Пройдите точный и быстрый</p>
-      <h1 class="gold">ТЕСТ НА <span style="display: block">ОПРЕДЕЛЕНИЕ</span>IQ</h1>
+      <p class="text1 textWhite">Пройдите точный и быстрый</p>
+      <h1 class="textGold">ТЕСТ НА <span style="display: block">ОПРЕДЕЛЕНИЕ</span>IQ</h1>
       <div class="imageContainer">
         <div class="blurryBg" />
         <div class="imageStyle" />
       </div>
       <ButtonComponent text="ПРОЙТИ ТЕСТ" class="buttonStyle"></ButtonComponent>
-      <h2 class="gold">
+      <h2 class="textGold">
         и получите рекомендации по развитию своего интеллекта
-        <span class="white">и улучшению финансового благосостояния и личной жизни</span>
+        <span class="textWhite">и улучшению финансового благосостояния и личной жизни</span>
       </h2>
-      <a class="anchor" href="#">
+      <a class="anchor textWhite" href="#">
         <div class="circle">
           <svg
             width="8"
@@ -38,7 +38,7 @@ export default {
             />
           </svg>
         </div>
-        <span>Подробнее</span>
+        <span class="anchorText">Подробнее</span>
       </a>
     </div>
   </div>
@@ -72,8 +72,6 @@ export default {
   text-align: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-
-  color: #fff;
 }
 .imageContainer {
   margin-left: auto;
@@ -116,7 +114,19 @@ export default {
   align-items: center;
   display: flex;
   flex-direction: column;
-  color: #fff;
+}
+
+.circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: grid;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+
+.anchorText {
 }
 
 /* These are REUSABLE MINI-CLASSES or styling for DEFAULT HTML COMPONENTS */
@@ -150,10 +160,10 @@ h2 {
   color: #ffc700;
 }
 
-.gold {
+.textGold {
   color: #ffc700;
 }
-.white {
+.textWhite {
   color: #fff;
 }
 </style>
