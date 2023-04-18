@@ -1,12 +1,10 @@
 <script setup lang="ts">
-import ButtonComponent from './components/ButtonComponent.vue'
 import NavBar from './components/Navbar.vue'
 import LandingPage from './components/LandingPage.vue'
 </script>
 
 <template>
   <div class="wrapper">
-    <!-- <ButtonComponent text="ДАЛЕЕ" /> -->
     <div class="phone">
       <div class="card">
         <NavBar />
