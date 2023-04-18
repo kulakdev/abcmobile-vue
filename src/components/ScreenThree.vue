@@ -4,13 +4,25 @@
       Прохождение теста займет у вас не более <span class="textGold bold900">12 минут</span>, а его
       результаты вы сможете <span class="textGold bold900">использовать всю жизнь.</span>
     </div>
-    <div class="greyContainer"></div>
+    <div class="greyContainer">
+      <span class="text2"
+        >Профессиональная интерпретация и детально проработанные рекомендации позволят вам
+        качественно изменить все аспекты своей жизни: от финансового до любовного.</span
+      >
+    </div>
+    <div class="buttonTransparent">
+      <ButtonTransparent text="ПРОЙТИ ТЕСТ" />
+    </div>
+    <div>© 2023 :P</div>
   </div>
 </template>
 
 <script lang="ts">
+import ButtonTransparent from './ButtonTransparent.vue'
+
 export default {
-  name: 'ScreenThree'
+  name: 'ScreenThree',
+  components: { ButtonTransparent }
 }
 </script>
 
@@ -24,6 +36,7 @@ export default {
 
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .text1 {
@@ -33,11 +46,28 @@ export default {
   font-weight: 400;
   font-size: 15px;
   line-height: 20px;
+  margin-bottom: 13px;
 
   margin-top: 54px;
   letter-spacing: 0.05em;
 }
 
+.text2 {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+
+  letter-spacing: 0.05em;
+
+  color: #181818;
+}
+
+.buttonTransparent {
+  width: max-content;
+  margin: 34px auto;
+}
 .bold900 {
   font-family: 'Merriweather';
   font-style: normal;
