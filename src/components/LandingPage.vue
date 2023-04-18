@@ -1,17 +1,21 @@
+<script lang="ts">
+import ButtonComponent from './ButtonComponent.vue'
+
+export default {
+  name: 'LandingPage',
+  components: { ButtonComponent }
+}
+</script>
+
 <template>
   <div>
     <div class="landing">
       <p class="text1">Пройдите точный и быстрый</p>
-      <h1>ТЕСТ НА ОПРЕДЕЛЕНИЕ IQ</h1>
+      <h1>ТЕСТ НА <span style="display: block">ОПРЕДЕЛЕНИЕ</span>IQ</h1>
+      <ButtonComponent text="ПРОЙТИ ТЕСТ"></ButtonComponent>
     </div>
   </div>
 </template>
-
-<script lang="ts">
-export default {
-  name: 'LandingPage'
-}
-</script>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Yeseva+One&display=swap');
@@ -34,11 +38,14 @@ h1 {
   line-height: 35px;
   text-align: center;
   text-transform: uppercase;
+  margin: initial 20px;
+  margin-top: 40px;
 
   color: #ffc700;
 
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 .text1 {
   display: block;
 
