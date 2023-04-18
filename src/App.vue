@@ -21,7 +21,7 @@ import QuoteComponent from './components/QuoteComponent.vue'
           ESTETESTTESTTESTETTESTTESTTESTETESTTESTTESTETTE
           STTESTTESTETESTTESTTESTETTESTTESTTESTETESTTESTTESTET
         </p>
-        <QuoteComponent />
+        <QuoteComponent id="quote" />
       </div>
     </div>
   </div>

@@ -6,8 +6,12 @@
       Профессиональный IQ-тест позволяет не только определить коэффициент вашего интеллекта, но и
       выработать список рекомендаций для повышения этого показателя.
     </p>
-    <QuoteIcon class="quote1" />
-    <QuoteIcon class="quote2" />
+    <div class="quoteOne">
+      <QuoteIcon />
+    </div>
+    <div class="quote2">
+      <QuoteIcon />
+    </div>
   </div>
 </template>
 
@@ -21,10 +25,28 @@ export default {
 </script>
 
 <style scoped>
+.quoteOne {
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  top: 34px;
+  left: 34px;
+}
+
+.quote2 {
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  bottom: 34px;
+  right: 34px;
+  transform: scale(-1, -1);
+}
+
 .voidWrapper {
   width: 100%;
   height: 339px;
   display: flex;
+  position: relative;
 }
 
 .voidImage {
@@ -65,13 +87,5 @@ export default {
   align-self: center;
   margin: 0 auto;
   color: #ffffff;
-}
-
-.quote1 {
-  top: 10;
-  left: 0;
-}
-
-.quote2 {
 }
 </style>

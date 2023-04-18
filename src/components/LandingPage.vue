@@ -23,7 +23,7 @@ export default {
           >и улучшению финансового благосостояния и личной жизни</span
         >
       </h2>
-      <a class="anchor textWhite" href="#">
+      <a class="anchor textWhite" href="#quote">
         <div class="circle">
           <svg
             width="8"
