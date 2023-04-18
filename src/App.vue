@@ -10,6 +10,8 @@ import LandingPage from './components/LandingPage.vue'
     <div class="phone">
       <div class="card">
         <NavBar />
+        <LandingPage />
+        <p>sdfasdfjhaslkjdfhaskldj</p>
       </div>
     </div>
   </div>
@@ -37,7 +39,7 @@ import LandingPage from './components/LandingPage.vue'
   overflow-y: scroll;
 
   background-size: contain;
-  background-image: url('src/assets/space.webp') !important;
+  background-color: chartreuse;
 }
 
 @media (min-width: 576px) {

@@ -17,6 +17,7 @@ export default {
 <style>
 .navbar {
   position: absolute;
+  z-index: 10;
   top: 0;
   left: 0;
 
