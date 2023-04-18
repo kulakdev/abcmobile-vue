@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="voidWrapper">
     <div class="voidImage" />
     <div class="blueBlob" />
   </div>
@@ -12,17 +12,25 @@ export default {
 </script>
 
 <style scoped>
-.voidImage {
+.voidWrapper {
   width: 100%;
   height: 339px;
-  /* background-image: url('src/assets/backgroundLight.webp'); */
+}
+
+.voidImage {
+  position: absolute;
+  width: 100%;
+  height: 339px;
+  background-image: url('src/assets/backgroundLight.webp');
   background-size: 571px 339px;
   background-position: center;
 }
+
 .blueBlob {
+  position: absolute;
   width: 100%;
   height: 100%;
-  background-size: 339px;
+  background-size: contain;
   background-image: radial-gradient(
     84.34% 50.29% at 48.75% 49.71%,
     #2950c2 0%,
