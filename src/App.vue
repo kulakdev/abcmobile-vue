@@ -11,6 +11,7 @@ import QuoteComponent from './components/QuoteComponent.vue'
         <NavBar />
         <LandingPage />
         <QuoteComponent id="quote" />
+        <ScreenTwo />
         <p>
           sdfasdfjhaslkjdfhaskldjTESTTESTTESTETESTTESTTES
           TETTESTTESTTESTETESTTESTTESTETTESTTESTTESTETEST
