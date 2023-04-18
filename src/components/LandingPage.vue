@@ -126,6 +126,7 @@ export default {
   display: grid;
   background-color: #fff;
   justify-content: center;
+
   align-items: center;
 }
 
@@ -145,7 +146,7 @@ export default {
 @media (min-width: 576px) {
   .landing {
     width: 100%;
-    height: 569px;
+    height: 570px;
     background-image: url('src/assets/space.webp') !important;
     justify-content: space-between;
     display: flex;

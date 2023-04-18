@@ -83,7 +83,7 @@ import ScreenTwo from './components/ScreenTwo.vue'
     width: 320px;
 
     overflow-y: scroll;
-    background-color: grey;
+    background-color: #181818;
   }
 }
 
