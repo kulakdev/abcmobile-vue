@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import NavBar from './components/Navbar.vue'
 import LandingPage from './components/LandingPage.vue'
+import QuoteComponent from './components/QuoteComponent.vue'
 </script>
 
 <template>
@@ -20,6 +21,7 @@ import LandingPage from './components/LandingPage.vue'
           ESTETESTTESTTESTETTESTTESTTESTETESTTESTTESTETTE
           STTESTTESTETESTTESTTESTETTESTTESTTESTETESTTESTTESTET
         </p>
+        <QuoteComponent />
       </div>
     </div>
   </div>
