@@ -25,9 +25,6 @@ export default {
   width: 100%;
   height: 339px;
   display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
 }
 
 .voidImage {
@@ -65,10 +62,14 @@ export default {
   text-align: center;
   letter-spacing: 0.05em;
 
+  align-self: center;
+  margin: 0 auto;
   color: #ffffff;
 }
 
 .quote1 {
+  top: 10;
+  left: 0;
 }
 
 .quote2 {
