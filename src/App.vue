@@ -48,6 +48,7 @@ import QuoteComponent from './components/QuoteComponent.vue'
   height: inherit;
   overflow-y: scroll;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 
   background-size: contain;
   background-color: grey;
