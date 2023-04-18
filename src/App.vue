@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import ButtonComponent from './components/ButtonComponent.vue'
-import NavBar from './components/NavBar.vue'
+import NavBar from './components/Navbar.vue'
 </script>
 
 <template>
@@ -20,7 +20,7 @@ import NavBar from './components/NavBar.vue'
   width: 100vw;
   height: 100vh;
 
-  background-image: url('src/assets/ventura.jpg');
+  background-image: none;
   background-size: cover;
 }
 
@@ -33,17 +33,34 @@ import NavBar from './components/NavBar.vue'
   left: 50%;
   transform: translate(-50%, -50%);
 
-  background-image: url('src/assets/phone.png');
+  background-image: none;
 }
-.card {
-  left: 27px;
-  top: 93px;
-  height: 569px;
-  width: 320px;
 
+.card {
+  max-width: 320px;
   overflow-y: scroll;
   background-color: greenyellow;
 }
+
+@media (min-width: 576px) {
+  .wrapper {
+    background-image: url('src/assets/ventura.jpg');
+  }
+  .phone {
+    background-image: url('src/assets/phone.png');
+  }
+
+  .card {
+    left: 27px;
+    top: 93px;
+    height: 569px;
+    width: 320px;
+
+    overflow-y: scroll;
+    background-color: greenyellow;
+  }
+}
+
 .card::-webkit-scrollbar {
   width: 1px;
 }
