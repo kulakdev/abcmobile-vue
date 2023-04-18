@@ -28,14 +28,15 @@ export default {
 .button {
   width: 24px;
   height: 16px;
+  margin-left: 15px;
+  margin-top: 17px;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
-
-  padding-left: 15px;
-  padding-top: 17px;
 }
 .icon {
   width: 24px;
-  height: 2.67px !important;
+  height: 1rem !important;
   background-color: aquamarine;
 }
 </style>
