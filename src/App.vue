@@ -10,6 +10,7 @@ import QuoteComponent from './components/QuoteComponent.vue'
       <div class="card">
         <NavBar />
         <LandingPage />
+        <QuoteComponent id="quote" />
         <p>
           sdfasdfjhaslkjdfhaskldjTESTTESTTESTETESTTESTTES
           TETTESTTESTTESTETESTTESTTESTETTESTTESTTESTETEST
@@ -21,7 +22,6 @@ import QuoteComponent from './components/QuoteComponent.vue'
           ESTETESTTESTTESTETTESTTESTTESTETESTTESTTESTETTE
           STTESTTESTETESTTESTTESTETTESTTESTTESTETESTTESTTESTET
         </p>
-        <QuoteComponent id="quote" />
       </div>
     </div>
   </div>
@@ -90,11 +90,11 @@ import QuoteComponent from './components/QuoteComponent.vue'
 }
 
 .card::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 1);
 }
 
 .card::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-  outline: 1px solid slategrey;
+  background: linear-gradient(#181818 20%, #9198e5, #181818 80%);
+  outline: 0px solid slategrey;
 }
 </style>
