@@ -56,8 +56,9 @@ import LandingPage from './components/LandingPage.vue'
 @media (min-width: 576px) {
   .wrapper {
     padding: 0;
+    margin: 0;
     width: 100vw;
-    height: 100%;
+    height: 100vh;
 
     background-image: url('src/assets/ventura.jpg');
     background-size: cover;

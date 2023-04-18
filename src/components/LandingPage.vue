@@ -19,7 +19,9 @@ export default {
       <ButtonComponent text="ПРОЙТИ ТЕСТ" class="buttonStyle"></ButtonComponent>
       <h2 class="textGold">
         и получите рекомендации по развитию своего интеллекта
-        <span class="textWhite">и улучшению финансового благосостояния и личной жизни</span>
+        <span class="textWhite" style="display: block"
+          >и улучшению финансового благосостояния и личной жизни</span
+        >
       </h2>
       <a class="anchor textWhite" href="#">
         <div class="circle">
@@ -50,7 +52,6 @@ export default {
 .landing {
   width: 100%;
   height: 100vh;
-  padding-top: 46px;
   background-image: url('src/assets/space.webp') !important;
   justify-content: space-between;
   display: flex;
@@ -109,7 +110,8 @@ export default {
 .anchor {
   width: 100%;
   height: 54px;
-  justify-content: center;
+  padding: 11px;
+  justify-content: space-between;
   align-content: center;
   align-items: center;
   display: flex;
@@ -135,6 +137,19 @@ export default {
   text-align: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+}
+
+/* DESKTOP VER */
+
+@media (min-width: 576px) {
+  .landing {
+    width: 100%;
+    height: 569px;
+    background-image: url('src/assets/space.webp') !important;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* These are REUSABLE MINI-CLASSES or styling for DEFAULT HTML COMPONENTS */
