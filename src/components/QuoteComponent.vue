@@ -19,8 +19,10 @@ export default {
 .voidWrapper {
   width: 100%;
   height: 339px;
+  display: flex;
   justify-content: center;
   align-content: center;
+  align-items: center;
 }
 
 .voidImage {
@@ -46,13 +48,14 @@ export default {
 }
 
 .voidText {
-  padding: 69px 36px;
+  /* padding: 69px 36px; */
+  max-width: 248px;
+  height: max-content;
   font-family: 'Yeseva One';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
-  /* or 128% */
 
   text-align: center;
   letter-spacing: 0.05em;
