@@ -20,9 +20,13 @@ export default {
   height: 100vh;
   padding-top: 46px;
   background-image: url('src/assets/space.webp') !important;
+
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
+  display: block;
   font-family: 'Yeseva One';
   font-style: normal;
   font-weight: 400;
@@ -36,9 +40,11 @@ h1 {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .text1 {
+  display: block;
+
   width: 100%;
 
-  top: 27px;
+  padding-top: 27px;
 
   font-family: 'PT Serif';
   font-style: normal;
