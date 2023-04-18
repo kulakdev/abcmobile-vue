@@ -2,6 +2,7 @@
 import NavBar from './components/Navbar.vue'
 import LandingPage from './components/LandingPage.vue'
 import QuoteComponent from './components/QuoteComponent.vue'
+import ScreenTwo from './components/ScreenTwo.vue'
 </script>
 
 <template>
