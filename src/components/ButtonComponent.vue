@@ -19,7 +19,6 @@ export default {
 </template>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap');
 .buttonStyle {
   width: 189px;
   height: 41px;

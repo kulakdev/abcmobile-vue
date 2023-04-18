@@ -47,8 +47,6 @@ export default {
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Yeseva+One&display=swap');
-
 .landing {
   padding: 46px 10px 0px;
   width: 100%;
@@ -185,12 +183,5 @@ h2 {
   text-transform: uppercase;
 
   color: #ffc700;
-}
-
-.textGold {
-  color: #ffc700;
-}
-.textWhite {
-  color: #fff;
 }
 </style>
