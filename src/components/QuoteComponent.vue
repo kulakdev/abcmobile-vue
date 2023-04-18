@@ -15,6 +15,7 @@ export default {
   width: 100%;
   height: 339px;
   background-image: url('src/assets/backgroundLight.webp');
+  background-size: cover;
 }
 .blueBlob {
   background: radial-gradient(
