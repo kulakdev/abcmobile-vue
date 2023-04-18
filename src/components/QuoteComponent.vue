@@ -6,12 +6,17 @@
       Профессиональный IQ-тест позволяет не только определить коэффициент вашего интеллекта, но и
       выработать список рекомендаций для повышения этого показателя.
     </p>
+    <QuoteIcon class="quote1" />
+    <QuoteIcon class="quote2" />
   </div>
 </template>
 
 <script lang="ts">
+import QuoteIcon from './icons/QuoteIcon.vue'
+
 export default {
-  name: 'QuoteComponent'
+  name: 'QuoteComponent',
+  components: { QuoteIcon }
 }
 </script>
 
