@@ -81,7 +81,7 @@ import ScreenThree from './components/ScreenThree.vue'
   .card {
     left: 27px;
     top: 93px;
-    height: 569px;
+    height: 570px;
     width: 320px;
 
     overflow-y: scroll;

@@ -26,7 +26,7 @@ export default {
   border-radius: 20px;
   border-style: none;
 
-  font-family: 'Merriweather';
+  font-family: 'Merriweather', serif;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
