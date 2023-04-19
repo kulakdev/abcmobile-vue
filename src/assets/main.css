@@ -1,6 +1,5 @@
 @import './base.css';
-
-html,
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=PT+Serif:wght@400;700&family=Yeseva+One&display=swap');
 body {
   margin: 0;
   padding: 0;
@@ -36,4 +35,11 @@ a,
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+}
+
+.textGold {
+  color: #ffc700;
+}
+.textWhite {
+  color: #fff;
 }

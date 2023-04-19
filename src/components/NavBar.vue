@@ -1,15 +1,16 @@
 <script lang="ts">
+import MenuIcon from './icons/MenuIcon.vue'
+
 export default {
-  name: 'NavBar'
+  name: 'NavBar',
+  components: { MenuIcon }
 }
 </script>
 
 <template>
   <div class="navbar">
     <a class="button">
-      <div class="icon"></div>
-      <div class="icon"></div>
-      <div class="icon"></div>
+      <MenuIcon />
     </a>
   </div>
 </template>
@@ -31,9 +32,6 @@ export default {
   height: 16px;
   margin-left: 15px;
   margin-top: 17px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 .icon {
   width: 24px;

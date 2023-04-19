@@ -23,7 +23,7 @@ export default {
           >и улучшению финансового благосостояния и личной жизни</span
         >
       </h2>
-      <a class="anchor textWhite" href="#">
+      <a class="anchor textWhite" href="#quote">
         <div class="circle">
           <svg
             width="8"
@@ -47,9 +47,8 @@ export default {
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Yeseva+One&display=swap');
-
 .landing {
+  padding: 46px 10px 0px;
   width: 100%;
   height: 100vh;
   background-image: url('src/assets/space.webp') !important;
@@ -125,6 +124,7 @@ export default {
   display: grid;
   background-color: #fff;
   justify-content: center;
+
   align-items: center;
 }
 
@@ -144,7 +144,7 @@ export default {
 @media (min-width: 576px) {
   .landing {
     width: 100%;
-    height: 569px;
+    height: 571px;
     background-image: url('src/assets/space.webp') !important;
     justify-content: space-between;
     display: flex;
@@ -170,6 +170,8 @@ h1 {
 }
 
 h2 {
+  padding-top: 10px;
+
   font-family: 'PT Serif';
   font-style: normal;
   font-weight: 700;
@@ -181,12 +183,5 @@ h2 {
   text-transform: uppercase;
 
   color: #ffc700;
-}
-
-.textGold {
-  color: #ffc700;
-}
-.textWhite {
-  color: #fff;
 }
 </style>

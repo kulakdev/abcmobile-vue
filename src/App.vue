@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import NavBar from './components/Navbar.vue'
 import LandingPage from './components/LandingPage.vue'
+import QuoteComponent from './components/QuoteComponent.vue'
+import ScreenTwo from './components/ScreenTwo.vue'
+import ScreenThree from './components/ScreenThree.vue'
 </script>
 
 <template>
@@ -9,17 +12,9 @@ import LandingPage from './components/LandingPage.vue'
       <div class="card">
         <NavBar />
         <LandingPage />
-        <p>
-          sdfasdfjhaslkjdfhaskldjTESTTESTTESTETESTTESTTES
-          TETTESTTESTTESTETESTTESTTESTETTESTTESTTESTETEST
-          TESTTESTETTESTTESTTESTETESTTESTTESTETTESTTESTTE
-          STETESTTESTTESTETTESTTESTTESTETESTTESTTESTETTES
-          TTESTTESTETESTTESTTESTETTESTTESTTESTETESTTESTTE
-          STETTESTTESTTESTETESTTESTTESTETTESTTESTTESTETES
-          TTESTTESTETTESTTESTTESTETESTTESTTESTETTESTTESTT
-          ESTETESTTESTTESTETTESTTESTTESTETESTTESTTESTETTE
-          STTESTTESTETESTTESTTESTETTESTTESTTESTETESTTESTTESTET
-        </p>
+        <QuoteComponent id="quote" />
+        <ScreenTwo />
+        <ScreenThree />
       </div>
     </div>
   </div>
@@ -46,9 +41,10 @@ import LandingPage from './components/LandingPage.vue'
   height: inherit;
   overflow-y: scroll;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 
   background-size: contain;
-  background-color: chartreuse;
+  background-color: grey;
 }
 
 @media (min-width: 576px) {
@@ -74,11 +70,11 @@ import LandingPage from './components/LandingPage.vue'
   .card {
     left: 27px;
     top: 93px;
-    height: 569px;
+    height: 570px;
     width: 320px;
 
     overflow-y: scroll;
-    background-color: greenyellow;
+    background-color: #181818;
   }
 }
 
@@ -87,11 +83,11 @@ import LandingPage from './components/LandingPage.vue'
 }
 
 .card::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 1);
 }
 
 .card::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-  outline: 1px solid slategrey;
+  background: linear-gradient(#181818 20%, #9198e5, #181818 80%);
+  outline: 0px solid slategrey;
 }
 </style>

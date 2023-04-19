@@ -1,6 +1,6 @@
 <script lang="ts">
 export default {
-  name: 'ButtonComponent',
+  name: 'ButtonTransparent',
   props: {
     text: {
       type: String,
@@ -15,16 +15,17 @@ export default {
 </script>
 
 <template>
-  <button class="buttonStyle" role="button">{{ text }}</button>
+  <button class="buttonTransparentStyle" role="button">{{ text }}</button>
 </template>
 
 <style>
-.buttonStyle {
+.buttonTransparentStyle {
   width: 189px;
   height: 41px;
-  background: radial-gradient(50% 50% at 50% 50%, #ffc700 0%, #ffc700 100%);
-  border-radius: 20px;
-  border-style: none;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 50px;
+  padding: 12px 18px;
 
   font-family: 'Merriweather', serif;
   font-style: normal;
@@ -36,7 +37,7 @@ export default {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 
-  color: #0d0c11;
+  color: #fff;
 }
 .buttonStyle:active {
   background: #dadada;
