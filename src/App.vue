@@ -8,7 +8,7 @@ import NavBar from './components/NavBar.vue'
       <div class="wrapper">
         <div class="phone">
           <div class="card">
-            <NavBar />
+            <NavBar></NavBar>
             <router-view></router-view>
           </div>
         </div>

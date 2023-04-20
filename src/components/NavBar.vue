@@ -29,6 +29,7 @@ export default defineComponent({
       <MenuIcon />
     </a>
     <p style="color: aqua; font-size: medium">{{ myBoolean }}</p>
+    <slot></slot>
     <a
       style="
         position: absolute;
@@ -36,7 +37,6 @@ export default defineComponent({
         height: max-content;
         min-width: fit-content;
         margin: 0;
-
         z-index: 10;
         display: flex;
         justify-content: center;
@@ -54,8 +54,8 @@ export default defineComponent({
       </div>
     </a>
     <div v-if="!myBoolean" class="menu">
-      <a href="#landing" class="item textWhite" @click="toggleComponent">Главная</a>
-      <a href="#quote" class="item textWhite" @click="toggleComponent">Информация о тесте</a>
+      <a href="/#landing" class="item textWhite" @click="toggleComponent">Главная</a>
+      <a href="/#quote" class="item textWhite" @click="toggleComponent">Информация о тесте</a>
       <RouterLink to="/about" class="item textGold" @click="toggleComponent"
         >Пройти тест</RouterLink
       >
