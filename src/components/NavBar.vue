@@ -35,12 +35,12 @@ export default defineComponent({
         min-width: fit-content;
         margin: 0;
 
-        background-color: tomato;
         z-index: 10;
         display: flex;
         justify-content: center;
         align-content: center;
         align-items: center;
+        transition: all 1s ease-out;
       "
       :class="{ left: myBoolean, right: !myBoolean }"
       @click="toggleComponent"
@@ -108,7 +108,7 @@ export default defineComponent({
   z-index: 1;
   height: 100vh;
   width: 100%;
-  background-color: blue;
+  background-color: #181818;
 }
 @media (min-width: 576px) {
   .menu {
