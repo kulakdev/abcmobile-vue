@@ -33,8 +33,15 @@ export default defineComponent({
     <a class="button" @click="toggleComponent">
       <MenuIcon />
     </a>
-    <p style="color: aqua; font-size: medium">{{ myBoolean }}</p>
-    <span v-if="showComponent">asdffasdfasdffasdjfhasdklhsakdjh</span>
+    <!-- This is for debugging purposes -->
+    <!-- <p style="color: aqua; font-size: medium">{{ myBoolean }}</p> -->
+    <!--  -->
+    <!-- I was thinking of a more smarter way of doing this, the idea was to use -->
+    <!-- a listener on a parent, and emmitter on child in order to pass the <img/> and <p> -->
+    <!-- from child to parent, so that in case we have multiple pages, all of which -->
+    <!-- have their own images and paragraphs, BUT this sounds like poorly allocated time -->
+    <!-- considering this app only has 2 screens -->
+    <span v-if="showComponent"> </span>
     <slot></slot>
     <a
       style="
