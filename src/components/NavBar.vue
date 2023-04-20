@@ -19,6 +19,11 @@ export default defineComponent({
       RouterLink,
       RouterView
     }
+  },
+  computed: {
+    showComponent() {
+      return this.$route.path === '/test'
+    }
   }
 })
 </script>
@@ -29,6 +34,7 @@ export default defineComponent({
       <MenuIcon />
     </a>
     <p style="color: aqua; font-size: medium">{{ myBoolean }}</p>
+    <span v-if="showComponent">asdffasdfasdffasdjfhasdklhsakdjh</span>
     <slot></slot>
     <a
       style="
@@ -56,9 +62,7 @@ export default defineComponent({
     <div v-if="!myBoolean" class="menu">
       <a href="/#landing" class="item textWhite" @click="toggleComponent">Главная</a>
       <a href="/#quote" class="item textWhite" @click="toggleComponent">Информация о тесте</a>
-      <RouterLink to="/about" class="item textGold" @click="toggleComponent"
-        >Пройти тест</RouterLink
-      >
+      <RouterLink to="/test" class="item textGold" @click="toggleComponent">Пройти тест</RouterLink>
     </div>
   </div>
 
