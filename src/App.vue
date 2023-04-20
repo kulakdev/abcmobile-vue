@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import NavBar from './components/NavBar.vue'
+</script>
 
 <template>
   <div id="app">
@@ -6,6 +8,7 @@
       <div class="wrapper">
         <div class="phone">
           <div class="card">
+            <NavBar />
             <router-view></router-view>
           </div>
         </div>
