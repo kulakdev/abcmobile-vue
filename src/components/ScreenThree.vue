@@ -6,8 +6,10 @@
     </div>
     <div class="greyContainer">
       <span class="text2"
-        >Профессиональная интерпретация и детально проработанные рекомендации позволят вам
-        качественно изменить все аспекты своей жизни: от финансового до любовного.</span
+        >Профессиональная интерпретация и детально
+        <span class="bold">проработанные рекомендации</span> позволят вам качественно
+        <span class="bold">изменить все аспекты своей жизни</span>: от финансового до
+        любовного.</span
       >
     </div>
     <div class="buttonTransparent">
@@ -77,8 +79,11 @@ export default {
 
   letter-spacing: 0.05em;
 }
-
-.greyContainer {
+<<<<<<< HEAD .bold {
+  font-weight: bold;
+  font-weight: 700;
+}
+=======>>>>>>>29c88725e9f93199437dfd7a0fce43dacc8e106d .greyContainer {
   width: 100%;
   padding: 30px 15px;
   background: rgba(243, 243, 242, 0.8);

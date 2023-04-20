@@ -9,7 +9,7 @@ export default {
 
 <template>
   <div>
-    <div class="landing">
+    <div id="landing" class="landing">
       <p class="text1 textWhite">Пройдите точный и быстрый</p>
       <h1 class="textGold">ТЕСТ НА <span style="display: block">ОПРЕДЕЛЕНИЕ</span>IQ</h1>
       <div class="imageContainer">

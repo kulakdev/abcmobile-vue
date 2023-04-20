@@ -38,10 +38,14 @@ export default {
   text-transform: uppercase;
 
   color: #fff;
+
+  transition: border-color 250ms ease-in-out, color 60ms ease-in-out, transform 60ms ease-in-out;
 }
-.buttonStyle:active {
-  background: #dadada;
-  color: #8e8e8e;
+.buttonTransparentStyle:active {
+  border: 1px solid #ffc700;
+  color: #ffc700;
+  transform: scale(1.01);
+
   box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
 }
