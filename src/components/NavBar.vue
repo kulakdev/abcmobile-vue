@@ -1,6 +1,6 @@
 <script lang="ts">
 import MenuIcon from './icons/MenuIcon.vue'
-
+import { RouterLink, RouterView } from 'vue-router'
 import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
@@ -15,7 +15,9 @@ export default defineComponent({
 
     return {
       myBoolean,
-      toggleComponent
+      toggleComponent,
+      RouterLink,
+      RouterView
     }
   }
 })
@@ -54,9 +56,13 @@ export default defineComponent({
     <div v-if="!myBoolean" class="menu">
       <a href="#landing" class="item textWhite" @click="toggleComponent">Главная</a>
       <a href="#quote" class="item textWhite" @click="toggleComponent">Информация о тесте</a>
-      <a href="/about" class="item textGold" @click="toggleComponent">Пройти тест</a>
+      <RouterLink to="/about" class="item textGold" @click="toggleComponent"
+        >Пройти тест</RouterLink
+      >
     </div>
   </div>
+
+  <RouterView />
 </template>
 
 <style>

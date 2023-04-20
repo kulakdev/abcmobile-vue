@@ -1,26 +1,20 @@
-<script setup lang="ts">
-import NavBar from './components/NavBar.vue'
-import LandingPage from './components/LandingPage.vue'
-import QuoteComponent from './components/QuoteComponent.vue'
-import ScreenTwo from './components/ScreenTwo.vue'
-import ScreenThree from './components/ScreenThree.vue'
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <div class="wrapper">
-    <div class="phone">
-      <div class="card">
-        <NavBar />
-        <LandingPage />
-        <QuoteComponent id="quote" />
-        <ScreenTwo />
-        <ScreenThree />
+  <div id="app">
+    <main>
+      <div class="wrapper">
+        <div class="phone">
+          <div class="card">
+            <router-view></router-view>
+          </div>
+        </div>
       </div>
-    </div>
+    </main>
   </div>
 </template>
 
-<style scoped>
+<style>
 .wrapper {
   padding: 0;
   width: 100vw;
