@@ -9,7 +9,6 @@
       </div>
     </div>
 
-    <div>poggers</div>
     <div v-if="selectedPage.image">
       <img style="width: 100px" :src="selectedPage.image" />
     </div>
