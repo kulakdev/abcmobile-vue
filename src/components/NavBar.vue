@@ -51,7 +51,11 @@ export default defineComponent({
         <div class="iconX" style="transform: rotate(45deg)"></div>
       </div>
     </a>
-    <div v-if="!myBoolean" class="menu"></div>
+    <div v-if="!myBoolean" class="menu">
+      <div class="item textWhite">Главная</div>
+      <div class="item textWhite">Информация о тесте</div>
+      <div class="item textGold">Пройти тест</div>
+    </div>
   </div>
 </template>
 
@@ -109,6 +113,22 @@ export default defineComponent({
   height: 100vh;
   width: 100%;
   background-color: #181818;
+
+  display: flex;
+  flex-direction: column;
+  padding: 110px 24px;
+}
+
+.item {
+  width: 100%;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 13px 0;
+
+  text-transform: uppercase;
 }
 @media (min-width: 576px) {
   .menu {
