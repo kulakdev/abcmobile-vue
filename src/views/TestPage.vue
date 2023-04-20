@@ -1,11 +1,14 @@
 <template>
   <div class="testPage">
     <div v-if="selectedPage">{{ selectedPage.title }}</div>
-    <ul v-if="selectedPage.list">
-      <div class="checkbox">
-        <radio v-for="item in selectedPage.list" v-bind:key="item">{{ item }}</radio>
+
+    <div v-if="selectedPage.list">
+      <div v-for="item in selectedPage.list" v-bind:key="item" class="checkbox">
+        <input type="radio" id="answers" />
+        <label for="answers" class="textWhite">{{ item }}</label>
       </div>
-    </ul>
+    </div>
+
     <div>poggers</div>
     <div v-if="selectedPage.image">
       <img style="width: 100px" :src="selectedPage.image" />
@@ -57,9 +60,13 @@ export default defineComponent({
   padding: 46px 10px 0px;
 }
 
-.chekbox {
+.checkbox {
   height: 50px;
-  background: #f2f3f3;
-  opacity: 0.15;
+  width: 100%;
+  padding: 0px;
+  background: rgba(242, 243, 243, 0.15);
+  margin: 4px 0;
+
+  color: #fff;
 }
 </style>
