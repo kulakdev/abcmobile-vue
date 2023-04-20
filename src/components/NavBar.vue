@@ -75,9 +75,10 @@ export default defineComponent({
 }
 .iconX {
   position: absolute;
+  top: calc(50% - 0.5mm);
+  left: -4px;
   width: 36px;
   height: 1mm;
-  top: 50%;
   background-color: #ffc700;
 }
 
