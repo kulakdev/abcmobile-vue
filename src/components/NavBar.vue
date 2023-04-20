@@ -1,7 +1,6 @@
 <script lang="ts">
 import MenuIcon from './icons/MenuIcon.vue'
 
-<<<<<<< HEAD
 import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
@@ -20,21 +19,11 @@ export default defineComponent({
     }
   }
 })
-=======
-export default {
-  name: 'NavBar',
-  components: { MenuIcon }
-}
->>>>>>> 29c88725e9f93199437dfd7a0fce43dacc8e106d
 </script>
 
 <template>
   <div class="navbar">
-<<<<<<< HEAD
     <a class="button" @click="toggleComponent">
-=======
-    <a class="button">
->>>>>>> 29c88725e9f93199437dfd7a0fce43dacc8e106d
       <MenuIcon />
     </a>
     <p style="color: aqua; font-size: medium">{{ myBoolean }}</p>
@@ -87,7 +76,6 @@ export default {
   height: 16px;
   margin-left: 15px;
   margin-top: 17px;
-<<<<<<< HEAD
 }
 .iconX {
   position: absolute;
@@ -129,8 +117,6 @@ export default {
   display: flex;
   flex-direction: column;
   padding: 110px 24px;
-=======
->>>>>>> 29c88725e9f93199437dfd7a0fce43dacc8e106d
 }
 
 .item {
