@@ -27,33 +27,26 @@ export default defineComponent({
       <MenuIcon />
     </a>
     <p style="color: aqua; font-size: medium">{{ myBoolean }}</p>
-
-    <div
-      v-if="!myBoolean"
+    <a
       style="
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        height: 100vh;
-        width: 100%;
-        background-color: brown;
+        position: absolute;
+
+        width: 24px;
+        height: 16px;
+        margin-left: 15px;
+        margin-top: 17px;
+        min-width: fit-content;
+        background-color: tomato;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       "
+      @click="toggleComponent"
     >
-      <a
-        style="
-          position: relative;
-          display: block;
-          width: 100px;
-          height: 100px;
-          min-width: fit-content;
-          background-color: tomato;
-        "
-        @click="toggleComponent"
-      >
-        <MenuIcon />
-      </a>
-    </div>
+      <MenuIcon />
+    </a>
+    <div v-if="!myBoolean" class="menu"></div>
   </div>
 </template>
 
@@ -79,5 +72,22 @@ export default defineComponent({
   width: 24px;
   height: 1mm;
   background-color: #696969;
+}
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100vh;
+  width: 100%;
+  background-color: blue;
+}
+@media (min-width: 576px) {
+  .menu {
+    width: 320px;
+    height: 570px;
+    left: 27px;
+    top: 93px;
+  }
 }
 </style>
