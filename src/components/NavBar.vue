@@ -41,7 +41,10 @@ export default defineComponent({
     <!-- from child to parent, so that in case we have multiple pages, all of which -->
     <!-- have their own images and paragraphs, BUT this sounds like poorly allocated time -->
     <!-- considering this app only has 2 screens -->
-    <span v-if="showComponent"> </span>
+    <span v-if="showComponent" class="showComponent">
+      <img src="src/assets/brain.webp" />
+      <p class="textGold">Тест на определение IQ</p>
+    </span>
     <slot></slot>
     <a
       style="
@@ -94,6 +97,31 @@ export default defineComponent({
   margin-left: 15px;
   margin-top: 17px;
 }
+
+.showComponent {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.showComponent > img {
+  max-width: 46px;
+  margin-left: 9px;
+  margin-right: 9px;
+}
+
+.showComponent > p {
+  font-family: 'Yeseva One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  color: #ffc700;
+}
+
 .iconX {
   position: absolute;
   top: calc(50% - 0.5mm);
