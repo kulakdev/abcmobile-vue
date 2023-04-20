@@ -56,4 +56,10 @@ export default defineComponent({
 .testPage {
   padding: 46px 10px 0px;
 }
+
+.chekbox {
+  height: 50px;
+  background: #f2f3f3;
+  opacity: 0.15;
+}
 </style>
