@@ -4,7 +4,7 @@
 
     <div v-if="selectedPage.list">
       <div v-for="item in selectedPage.list" v-bind:key="item" class="checkbox">
-        <input type="radio" id="answers" />
+        <input type="radio" id="answers" v-model="radioValue" />
         <label for="answers" class="textWhite">{{ item }}</label>
       </div>
     </div>
@@ -13,18 +13,19 @@
     <div v-if="selectedPage.image">
       <img style="width: 100px" :src="selectedPage.image" />
     </div>
-    <a @click="incrementIndex">Next</a>
-    <a @click="decrementIndex">Previous</a>
+    <ButtonComponent text="Next" @click="incrementIndex" :disabled="!radioValue" />
   </div>
 </template>
 
 <script lang="ts">
+import ButtonComponent from '@/components/ButtonComponent.vue'
 import { defineComponent, reactive, computed } from 'vue'
 
 export default defineComponent({
   setup() {
     const state = reactive({
       currentIndex: 0,
+      radioValue: '',
       people: [
         { title: 'John', list: ['one', 'two'] },
         { title: 'Simon', image: 'src/assets/brain.webp' },
@@ -33,25 +34,23 @@ export default defineComponent({
         { title: 'Peter' }
       ]
     })
-
     const incrementIndex = () => {
       state.currentIndex = (state.currentIndex + 1) % state.people.length
     }
-
     const decrementIndex = () => {
       state.currentIndex = (state.currentIndex - 1 + state.people.length) % state.people.length
     }
-
     const selectedPage = computed(() => {
       return state.people[state.currentIndex]
     })
-
     return {
       selectedPage,
       incrementIndex,
-      decrementIndex
+      decrementIndex,
+      radioValue: state.radioValue
     }
-  }
+  },
+  components: { ButtonComponent }
 })
 </script>
 
