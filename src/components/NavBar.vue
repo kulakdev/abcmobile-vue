@@ -30,21 +30,26 @@ export default defineComponent({
     <a
       style="
         position: absolute;
-
-        width: 24px;
-        height: 16px;
-        margin-left: 15px;
-        margin-top: 17px;
+        width: max-content;
+        height: max-content;
         min-width: fit-content;
+        margin: 0;
+
         background-color: tomato;
         z-index: 10;
         display: flex;
         justify-content: center;
+        align-content: center;
         align-items: center;
       "
+      :class="{ left: myBoolean, right: !myBoolean }"
       @click="toggleComponent"
     >
-      <MenuIcon />
+      <div v-if="myBoolean"><MenuIcon /></div>
+      <div v-else class="cross">
+        <div class="iconX" style="transform: rotate(-45deg)"></div>
+        <div class="iconX" style="transform: rotate(45deg)"></div>
+      </div>
     </a>
     <div v-if="!myBoolean" class="menu"></div>
   </div>
@@ -68,10 +73,32 @@ export default defineComponent({
   margin-left: 15px;
   margin-top: 17px;
 }
-.icon {
-  width: 24px;
+.iconX {
+  position: absolute;
+  width: 36px;
   height: 1mm;
-  background-color: #696969;
+  top: 50%;
+  background-color: #ffc700;
+}
+
+.right {
+  right: 15px;
+  top: 17px;
+  left: auto;
+}
+
+.left {
+  left: 15px;
+  top: 17px;
+  right: auto;
+}
+
+.cross {
+  width: 28px;
+  height: 28px;
+  display: block;
+  align-self: center;
+  justify-self: center;
 }
 .menu {
   position: fixed;
