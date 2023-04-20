@@ -79,11 +79,11 @@ export default {
 
   letter-spacing: 0.05em;
 }
-.bold {
+<<<<<<< HEAD .bold {
   font-weight: bold;
   font-weight: 700;
 }
-.greyContainer {
+=======>>>>>>>29c88725e9f93199437dfd7a0fce43dacc8e106d .greyContainer {
   width: 100%;
   padding: 30px 15px;
   background: rgba(243, 243, 242, 0.8);
