@@ -52,9 +52,9 @@ export default defineComponent({
       </div>
     </a>
     <div v-if="!myBoolean" class="menu">
-      <div class="item textWhite">Главная</div>
-      <div class="item textWhite">Информация о тесте</div>
-      <div class="item textGold">Пройти тест</div>
+      <a href="#landing" class="item textWhite" @click="toggleComponent">Главная</a>
+      <a href="#quote" class="item textWhite" @click="toggleComponent">Информация о тесте</a>
+      <a href="/about" class="item textGold" @click="toggleComponent">Пройти тест</a>
     </div>
   </div>
 </template>
