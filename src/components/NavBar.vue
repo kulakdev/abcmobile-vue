@@ -45,7 +45,6 @@ export default defineComponent({
       <img src="src/assets/brain.webp" />
       <p class="textGold">Тест на определение IQ</p>
     </span>
-    <slot></slot>
     <a
       style="
         position: absolute;
@@ -75,8 +74,6 @@ export default defineComponent({
       <RouterLink to="/test" class="item textGold" @click="toggleComponent">Пройти тест</RouterLink>
     </div>
   </div>
-
-  <RouterView />
 </template>
 
 <style>

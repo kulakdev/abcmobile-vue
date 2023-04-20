@@ -1,11 +1,15 @@
 <template>
-  <div>
+  <div class="testPage">
     <div v-if="selectedPage">{{ selectedPage.title }}</div>
     <ul v-if="selectedPage.list">
       <div class="checkbox">
-        <radio v-for="item in selectedPage.list" v-bind:key="item">{{ selectedPage.list }}</radio>
+        <radio v-for="item in selectedPage.list" v-bind:key="item">{{ item }}</radio>
       </div>
     </ul>
+    <div>poggers</div>
+    <div v-if="selectedPage.image">
+      <img style="width: 100px" :src="selectedPage.image" />
+    </div>
     <a @click="incrementIndex">Next</a>
     <a @click="decrementIndex">Previous</a>
   </div>
@@ -17,13 +21,14 @@ import { defineComponent, reactive, computed } from 'vue'
 export default defineComponent({
   setup() {
     const state = reactive({
+      currentIndex: 0,
       people: [
         { title: 'John', list: ['one', 'two'] },
-        { title: 'Simon' },
+        { title: 'Simon', image: 'src/assets/brain.webp' },
         { title: 'Paul' },
-        { title: 'James' }
-      ],
-      currentIndex: 0
+        { title: 'James' },
+        { title: 'Peter' }
+      ]
     })
 
     const incrementIndex = () => {
@@ -46,3 +51,9 @@ export default defineComponent({
   }
 })
 </script>
+
+<style>
+.testPage {
+  padding: 46px 10px 0px;
+}
+</style>
