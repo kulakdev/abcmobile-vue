@@ -15,12 +15,15 @@
     <ButtonComponent text="Next" @click="incrementIndex" :disabled="!radioValue" />
 
     <div v-if="selectedPage.grid" class="grid">
-      <div
+      <label
+        for="cell"
         v-for="cell in selectedPage.grid"
         class="cell"
         :key="cell"
         :style="`background-color:` + cell"
-      ></div>
+      >
+        <input type="radio" name="cell" id="cell" />
+      </label>
     </div>
   </div>
 </template>
@@ -111,7 +114,17 @@ export default {
   height: 75px;
 }
 
-.cell:active {
+.invisible-radio {
+  /* per https://a11yproject.com/posts/how-to-hide-content/ */
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.cell:focus {
   border: 6px solid yellow;
 }
 
