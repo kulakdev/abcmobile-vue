@@ -99,7 +99,8 @@ export default {
 }
 
 .cell {
-  margin: 12px;
+  margin: 9px;
+  border: 3px solid rgba(0, 0, 0, 0);
   width: 75px;
   height: 75px;
 }
