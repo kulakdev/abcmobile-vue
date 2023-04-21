@@ -18,11 +18,11 @@
 
 <script lang="ts">
 import ButtonComponent from '@/components/ButtonComponent.vue'
-import { reactive, computed } from 'vue'
+import { computed } from 'vue'
 
 export default {
   data() {
-    const state = reactive({
+    const state = {
       currentIndex: 0,
       radioValue: '',
       people: [
@@ -32,7 +32,7 @@ export default {
         { title: 'James' },
         { title: 'Peter' }
       ]
-    })
+    }
     const incrementIndex = () => {
       state.currentIndex = (state.currentIndex + 1) % state.people.length
     }
