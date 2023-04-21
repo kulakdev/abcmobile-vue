@@ -13,26 +13,45 @@
       <img style="width: 100px" :src="selectedPage.image" />
     </div>
     <ButtonComponent text="Next" @click="incrementIndex" :disabled="!radioValue" />
+
+    <div v-if="selectedPage.grid" class="grid">
+      <div
+        v-for="cell in selectedPage.grid"
+        class="cell"
+        :key="cell"
+        :style="`background-color:` + cell"
+      ></div>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import ButtonComponent from '@/components/ButtonComponent.vue'
-import { computed } from 'vue'
+import { reactive, computed } from 'vue'
 
 export default {
   data() {
-    const state = {
-      currentIndex: 0,
+    const state = reactive({
+      currentIndex: 4,
       radioValue: '',
       people: [
-        { title: 'John', list: ['one', 'two'] },
-        { title: 'Simon', image: 'src/assets/brain.webp' },
-        { title: 'Paul' },
-        { title: 'James' },
-        { title: 'Peter' }
+        { title: 'Ваш пол:', list: ['Мужчина', 'Женщина'] },
+        {
+          title: 'Укажите ваш возраст',
+          list: ['До 18', 'От 18 до 28', 'От 29 до 35', 'От 36'],
+          image: 'src/assets/brain.webp'
+        },
+        { title: 'Выбери лишнее:', list: ['Дом', 'Шалаш', 'Бунгало', 'Скамейка', 'Хижина'] },
+        {
+          title: 'Продолжите числовой ряд: 18  20  24  32',
+          list: ['62', '48', '74', '57', '60', '77']
+        },
+        {
+          title: 'Выберите цвет, который сейчас наиболее Вам приятен:',
+          grid: [' gray', 'blue', 'green', 'orange', 'yellow', 'brown', 'black', 'purple', 'aqua']
+        }
       ]
-    }
+    })
     const incrementIndex = () => {
       state.currentIndex = (state.currentIndex + 1) % state.people.length
     }
@@ -61,6 +80,18 @@ export default {
 }
 .question {
   font-size: 20;
+}
+
+.grid {
+  max-width: 299px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cell {
+  margin: 12px;
+  width: 75px;
+  height: 75px;
 }
 
 .checkbox {
