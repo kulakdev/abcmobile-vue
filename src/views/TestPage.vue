@@ -48,7 +48,17 @@ export default {
         },
         {
           title: 'Выберите цвет, который сейчас наиболее Вам приятен:',
-          grid: [' gray', 'blue', 'green', 'orange', 'yellow', 'brown', 'black', 'purple', 'aqua']
+          grid: [
+            ' gray',
+            'blue',
+            'green',
+            'orangered',
+            'yellow',
+            'brown',
+            'black',
+            'purple',
+            'teal'
+          ]
         }
       ]
     })
