@@ -40,7 +40,6 @@ export default defineComponent({
     <!-- a listener on a parent, and emmitter on child in order to pass the <img/> and <p> -->
     <!-- from child to parent, so that in case we have multiple pages, all of which -->
     <!-- have their own images and paragraphs, BUT this sounds like poorly allocated time -->
-    <!-- considering this app only has 2 screens -->
     <span v-if="showComponent" class="showComponent">
       <img src="src/assets/brain.webp" />
       <p class="textGold">Тест на определение IQ</p>

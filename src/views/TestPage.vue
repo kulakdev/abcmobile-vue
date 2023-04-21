@@ -1,10 +1,10 @@
 <template>
   <div class="testPage">
-    <div v-if="selectedPage">{{ selectedPage.title }}</div>
+    <div v-if="selectedPage" class="question">{{ selectedPage.title }}</div>
 
     <div v-if="selectedPage.list">
       <div v-for="item in selectedPage.list" v-bind:key="item" class="checkbox">
-        <input type="radio" id="answers" v-model="radioValue" />
+        <input name="answer" type="radio" id="item" :value="item" v-model="radioValue" />
         <label for="answers" class="textWhite">{{ item }}</label>
       </div>
     </div>
@@ -18,10 +18,10 @@
 
 <script lang="ts">
 import ButtonComponent from '@/components/ButtonComponent.vue'
-import { defineComponent, reactive, computed } from 'vue'
+import { reactive, computed } from 'vue'
 
-export default defineComponent({
-  setup() {
+export default {
+  data() {
     const state = reactive({
       currentIndex: 0,
       radioValue: '',
@@ -42,6 +42,7 @@ export default defineComponent({
     const selectedPage = computed(() => {
       return state.people[state.currentIndex]
     })
+
     return {
       selectedPage,
       incrementIndex,
@@ -50,12 +51,16 @@ export default defineComponent({
     }
   },
   components: { ButtonComponent }
-})
+}
 </script>
 
 <style>
 .testPage {
   padding: 46px 10px 0px;
+  font-family: 'PT Serif', serif;
+}
+.question {
+  font-size: 20;
 }
 
 .checkbox {
