@@ -87,22 +87,32 @@ export default {
 .testPage {
   padding: 46px 10px 0px;
   font-family: 'PT Serif', serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .question {
   font-size: 20;
 }
 
 .grid {
+  margin-left: auto;
+  margin-right: auto;
+
   max-width: 299px;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 81px);
+  grid-gap: 12px;
 }
 
 .cell {
-  margin: 9px;
   border: 3px solid rgba(0, 0, 0, 0);
   width: 75px;
   height: 75px;
+}
+
+.cell:active {
+  border: 6px solid yellow;
 }
 
 .checkbox {
