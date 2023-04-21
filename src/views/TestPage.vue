@@ -15,15 +15,14 @@
     <ButtonComponent text="Next" @click="incrementIndex" :disabled="!radioValue" />
 
     <div v-if="selectedPage.grid" class="grid">
-      <label
-        for="cell"
-        v-for="cell in selectedPage.grid"
+      <div
+        tabindex="0"
+        v-for="(cell, index) in selectedPage.grid"
         class="cell"
-        :key="cell"
+        :key="index"
         :style="`background-color:` + cell"
-      >
-        <input type="radio" name="cell" id="cell" />
-      </label>
+        @click="setSelectedCell(index)"
+      ></div>
     </div>
   </div>
 </template>
@@ -37,6 +36,7 @@ export default {
     const state = reactive({
       currentIndex: 4,
       radioValue: '',
+      selectedCell: '',
       people: [
         { title: 'Ваш пол:', list: ['Мужчина', 'Женщина'] },
         {
@@ -51,20 +51,11 @@ export default {
         },
         {
           title: 'Выберите цвет, который сейчас наиболее Вам приятен:',
-          grid: [
-            ' gray',
-            'blue',
-            'green',
-            'orangered',
-            'yellow',
-            'brown',
-            'black',
-            'purple',
-            'teal'
-          ]
+          grid: ['gray', 'blue', 'green', 'orangered', 'yellow', 'brown', 'black', 'purple', 'teal']
         }
       ]
     })
+
     const incrementIndex = () => {
       state.currentIndex = (state.currentIndex + 1) % state.people.length
     }
@@ -75,10 +66,16 @@ export default {
       return state.people[state.currentIndex]
     })
 
+    const setSelectedCell = (index) => {
+      state.selectedCell = index
+      console.log(state.selectedCell)
+    }
+
     return {
       selectedPage,
       incrementIndex,
       decrementIndex,
+      setSelectedCell,
       radioValue: state.radioValue
     }
   },
@@ -114,18 +111,26 @@ export default {
   height: 75px;
 }
 
-.invisible-radio {
-  /* per https://a11yproject.com/posts/how-to-hide-content/ */
-  position: absolute;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
 .cell:focus {
   border: 6px solid yellow;
+}
+
+.invisible-radio {
+  border: 6px solid yellow;
+  /* appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: transparent;
+  border: none;
+  outline: none; */
+}
+
+.active {
+  border: 6px solid yellow;
+}
+
+.passive {
+  border: 6px solid green;
 }
 
 .checkbox {
