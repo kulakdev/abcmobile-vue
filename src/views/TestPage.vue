@@ -64,9 +64,7 @@ export default {
       state.radioValue = ''
       console.log(state.answers)
     }
-    const decrementIndex = () => {
-      state.currentIndex = (state.currentIndex - 1 + state.people.length) % state.people.length
-    }
+
     const selectedPage = computed(() => {
       return state.people[state.currentIndex]
     })
@@ -80,7 +78,6 @@ export default {
       state,
       selectedPage,
       incrementIndex,
-      decrementIndex,
       setSelectedCell,
       selectedCell: state.selectedCell
     }
