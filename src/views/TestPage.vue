@@ -24,7 +24,7 @@
       ></div>
     </div>
 
-    <ButtonComponent text="Next" @click="incrementIndex" :disabled="!selectedCell" />
+    <ButtonComponent text="Next" @click="incrementIndex" :disabled="!state.selectedCell" />
   </div>
 </template>
 
@@ -35,7 +35,7 @@ import { reactive, computed } from 'vue'
 export default {
   data() {
     const state = reactive({
-      currentIndex: 0,
+      currentIndex: 5,
       answers: [],
       selectedCell: '',
       people: [
@@ -53,19 +53,29 @@ export default {
         {
           title: 'Выберите цвет, который сейчас наиболее Вам приятен:',
           grid: ['gray', 'blue', 'green', 'orangered', 'yellow', 'brown', 'black', 'purple', 'teal']
+        },
+        {
+          title: 'Какой из городов лишний?',
+          list: ['Вашингтон', 'Лондон', 'Париж', 'Нью-Йорк', 'Москва', 'Оттава']
         }
       ]
     })
 
     const incrementIndex = () => {
-      state.answers.push(state.selectedCell)
-      state.currentIndex = state.currentIndex + 1
-      state.selectedCell = ''
-      state.radioValue = ''
-      console.log(state.answers)
+      if (state.currentIndex < state.people.length - 1) {
+        state.answers.push(state.selectedCell)
+        state.currentIndex = state.currentIndex + 1
+        state.selectedCell = ''
+        console.log(state.answers)
+      } else {
+        this.$router.push({ path: '/' })
+      }
     }
 
     const selectedPage = computed(() => {
+      console.log(state.people, state.currentIndex)
+      console.log(state.answers[state.currentIndex], 'pog2')
+
       return state.people[state.currentIndex]
     })
 
