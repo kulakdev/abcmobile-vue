@@ -8,8 +8,8 @@
 
     <div v-if="selectedPage.list" style="width: 100%">
       <div v-for="item in selectedPage.list" v-bind:key="item" class="checkbox">
-        <input name="answer" type="radio" id="item" :value="item" v-model="radioValue" />
-        <label for="answers" class="textWhite">{{ item }}</label>
+        <input name="answer" type="radio" id="item" :value="item" @click="setSelectedCell(item)" />
+        <label for="answer" class="textWhite">{{ item }}</label>
       </div>
     </div>
 
@@ -24,7 +24,7 @@
       ></div>
     </div>
 
-    <ButtonComponent text="Next" @click="incrementIndex" :disabled="!radioValue" />
+    <ButtonComponent text="Next" @click="incrementIndex" :disabled="!selectedCell" />
   </div>
 </template>
 
@@ -36,7 +36,7 @@ export default {
   data() {
     const state = reactive({
       currentIndex: 0,
-      radioValue: [],
+      answers: [],
       selectedCell: '',
       people: [
         { title: 'Ваш пол:', list: ['Мужчина', 'Женщина'] },
@@ -58,7 +58,11 @@ export default {
     })
 
     const incrementIndex = () => {
-      state.currentIndex = (state.currentIndex + 1) % state.people.length
+      state.answers.push(state.selectedCell)
+      state.currentIndex = state.currentIndex + 1
+      state.selectedCell = ''
+      state.radioValue = ''
+      console.log(state.answers)
     }
     const decrementIndex = () => {
       state.currentIndex = (state.currentIndex - 1 + state.people.length) % state.people.length
@@ -73,11 +77,12 @@ export default {
     }
 
     return {
+      state,
       selectedPage,
       incrementIndex,
       decrementIndex,
       setSelectedCell,
-      radioValue: state.radioValue
+      selectedCell: state.selectedCell
     }
   },
   components: { ButtonComponent }
