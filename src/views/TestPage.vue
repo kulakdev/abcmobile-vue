@@ -2,7 +2,7 @@
   <div class="testPage">
     <div v-if="selectedPage" class="question">{{ selectedPage.title }}</div>
 
-    <div v-if="selectedPage.list">
+    <div v-if="selectedPage.list" style="width: 100%">
       <div v-for="item in selectedPage.list" v-bind:key="item" class="checkbox">
         <input name="answer" type="radio" id="item" :value="item" v-model="radioValue" />
         <label for="answers" class="textWhite">{{ item }}</label>
@@ -34,8 +34,8 @@ import { reactive, computed } from 'vue'
 export default {
   data() {
     const state = reactive({
-      currentIndex: 4,
-      radioValue: '',
+      currentIndex: 0,
+      radioValue: [],
       selectedCell: '',
       people: [
         { title: 'Ваш пол:', list: ['Мужчина', 'Женщина'] },
@@ -86,6 +86,7 @@ export default {
 <style>
 .testPage {
   padding: 46px 10px 0px;
+  width: 100%;
   font-family: 'PT Serif', serif;
   display: flex;
   flex-direction: column;
