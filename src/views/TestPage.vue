@@ -73,9 +73,6 @@ export default {
     }
 
     const selectedPage = computed(() => {
-      console.log(state.people, state.currentIndex)
-      console.log(state.answers[state.currentIndex], 'pog2')
-
       return state.people[state.currentIndex]
     })
 
