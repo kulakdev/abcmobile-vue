@@ -2,15 +2,15 @@
   <div class="testPage">
     <div v-if="selectedPage" class="question">{{ selectedPage.title }}</div>
 
+    <div v-if="selectedPage.image">
+      <img style="width: 100px" :src="selectedPage.image" />
+    </div>
+
     <div v-if="selectedPage.list" style="width: 100%">
       <div v-for="item in selectedPage.list" v-bind:key="item" class="checkbox">
         <input name="answer" type="radio" id="item" :value="item" v-model="radioValue" />
         <label for="answers" class="textWhite">{{ item }}</label>
       </div>
-    </div>
-
-    <div v-if="selectedPage.image">
-      <img style="width: 100px" :src="selectedPage.image" />
     </div>
 
     <div v-if="selectedPage.grid" class="grid">
