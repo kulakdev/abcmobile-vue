@@ -12,7 +12,6 @@
     <div v-if="selectedPage.image">
       <img style="width: 100px" :src="selectedPage.image" />
     </div>
-    <ButtonComponent text="Next" @click="incrementIndex" :disabled="!radioValue" />
 
     <div v-if="selectedPage.grid" class="grid">
       <div
@@ -24,6 +23,8 @@
         @click="setSelectedCell(index)"
       ></div>
     </div>
+
+    <ButtonComponent text="Next" @click="incrementIndex" :disabled="!radioValue" />
   </div>
 </template>
 
