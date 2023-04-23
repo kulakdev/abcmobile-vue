@@ -248,7 +248,7 @@ export default {
 }
 
 #answer {
-  width: 100%;
+  width: auto;
   height: 100%;
 }
 
