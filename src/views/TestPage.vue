@@ -27,10 +27,10 @@
         tabindex="0"
         v-for="(cell, index) in selectedPage.numbers"
         class="numbercell"
-        :class="{ numbercellActive: state.selectedCell == index }"
+        :class="{ numbercellActive: state.selectedCell == cell }"
         :key="index"
         :style="`background-color:` + cell"
-        @click="setSelectedCell(index)"
+        @click="setSelectedCell(cell)"
       >
         {{ cell }}
       </div>
@@ -43,7 +43,7 @@
         class="cell"
         :key="index"
         :style="`background-color:` + cell"
-        @click="setSelectedCell(index)"
+        @click="setSelectedCell(cell)"
       ></div>
     </div>
 
@@ -60,7 +60,7 @@ import { reactive, computed } from 'vue'
 export default {
   data() {
     const state = reactive({
-      currentIndex: 0,
+      currentIndex: 7,
       answers: [],
       selectedCell: '',
       people: [
@@ -241,20 +241,18 @@ export default {
   color: #ffffff;
 }
 
-.circlebutton
-.circlebuttonactive: {
-  background: #2950c2;
-  border: 1px solid #272727;
-}
-
 #answer {
   width: auto;
   height: 100%;
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
 
 .round {
   width: 20px;
   height: 20px;
+  min-width: 20px;
+  min-height: 20px;
   background-color: transparent;
   border-radius: 50%;
   border: 1px solid white;
