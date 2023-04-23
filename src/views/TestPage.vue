@@ -1,56 +1,67 @@
 <template>
-  <div class="testPage">
-    <div class="progressBar" />
-
-    <div v-if="selectedPage" class="question">{{ selectedPage.title }}</div>
-
-    <div v-if="selectedPage.image" class="imageContainer">
-      <img :src="selectedPage.image" />
-    </div>
-
-    <div v-if="selectedPage.list" class="list" style="width: 100%">
-      <div v-for="item in selectedPage.list" v-bind:key="item">
+  <div class="testPageOverlay">
+    <div class="testPage">
+      <div v-if="selectedPage" class="progressBar">
         <div
-          name="answer"
-          :value="item"
-          class="checkbox textWhite"
-          :class="{ checkboxActive: state.selectedCell == item }"
-          @click="setSelectedCell(item)"
-        >
-          <div class="round" tabindex="1" :class="{ roundActive: state.selectedCell == item }" />
-          <div id="answer" :class="{ checkboxActive: state.selectedCell == item }">{{ item }}</div>
+          class="innerProgress"
+          :style="`width: ` + [(state.currentIndex / state.people.length) * 100] + `%`"
+        ></div>
+      </div>
+
+      <div v-if="selectedPage" class="question">{{ selectedPage.title }}</div>
+
+      <div v-if="selectedPage.image" class="imageContainer">
+        <img :src="selectedPage.image" />
+      </div>
+
+      <div v-if="selectedPage.list" class="list" style="width: 100%">
+        <div v-for="item in selectedPage.list" v-bind:key="item">
+          <div
+            name="answer"
+            :value="item"
+            class="checkbox textWhite"
+            :class="{ checkboxActive: state.selectedCell == item }"
+            @click="setSelectedCell(item)"
+          >
+            <div class="round" tabindex="1" :class="{ roundActive: state.selectedCell == item }" />
+            <div id="answer" :class="{ checkboxActive: state.selectedCell == item }">
+              {{ item }}
+            </div>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div v-if="selectedPage.numbers" class="numbers">
-      <div class="numbdersBr" />
-      <div
-        tabindex="0"
-        v-for="(cell, index) in selectedPage.numbers"
-        class="numbercell"
-        :class="{ numbercellActive: state.selectedCell == cell }"
-        :key="index"
-        :style="`background-color:` + cell"
-        @click="setSelectedCell(cell)"
-      >
-        {{ cell }}
+      <div v-if="selectedPage.numbers" class="numbersWrap">
+        <div class="numbersBr"></div>
+        <div class="numbers">
+          <div
+            tabindex="0"
+            v-for="(cell, index) in selectedPage.numbers"
+            class="numbercell"
+            :class="{ numbercellActive: state.selectedCell == cell }"
+            :key="index"
+            :style="`background-color:` + cell"
+            @click="setSelectedCell(cell)"
+          >
+            {{ cell }}
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div v-if="selectedPage.grid" class="grid">
-      <div
-        tabindex="0"
-        v-for="(cell, index) in selectedPage.grid"
-        class="cell"
-        :key="index"
-        :style="`background-color:` + cell"
-        @click="setSelectedCell(cell)"
-      ></div>
-    </div>
+      <div v-if="selectedPage.grid" class="grid">
+        <div
+          tabindex="0"
+          v-for="(cell, index) in selectedPage.grid"
+          class="cell"
+          :key="index"
+          :style="`background-color:` + cell"
+          @click="setSelectedCell(cell)"
+        ></div>
+      </div>
 
-    <div class="buttonComponent">
-      <ButtonComponent text="Next" @click="incrementIndex" :disabled="!state.selectedCell" />
+      <div class="buttonComponent">
+        <ButtonComponent text="Next" @click="incrementIndex" :disabled="!state.selectedCell" />
+      </div>
     </div>
   </div>
 </template>
@@ -62,7 +73,7 @@ import { reactive, computed } from 'vue'
 export default {
   data() {
     const state = reactive({
-      currentIndex: 7,
+      currentIndex: 6,
       answers: [],
       selectedCell: '',
       people: [
@@ -97,6 +108,11 @@ export default {
             'Быть устремленными мыслями в будущее',
             'Учитывать в ежедневной практике прошлый опыт'
           ]
+        },
+        {
+          title: 'Вставьте подходящее число',
+          image: 'src/assets/star.jpg',
+          numbers: ['34', '36', '53', '44', '66', '42']
         }
       ]
     })
@@ -142,33 +158,47 @@ export default {
 
 <style>
 .testPage {
-  padding: 46px 10px 0px;
+  padding: 46px 0px 0px;
   width: 100%;
-  height: 570px;
+  height: 100vh;
   font-family: 'PT Serif', serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  background: rgba(13, 12, 17, 0.728);
+}
+.testPageOverlay {
+  width: 100%;
+  height: 100%;
+  background: url('src/assets/space.webp');
 }
 
 @media (min-width: 576px) {
-  .testpage {
+  .testPage {
     height: 570px;
   }
 }
 
 .progressBar {
-  width: 100%;
-  max-width: inherit;
-  max-height: ;
+  width: 280px;
   height: 11px;
-  padding: 17px 30px;
-  display: block;
-  position: relative;
+
+  margin-top: 17px;
+
   background: #f2f3f3;
   mix-blend-mode: normal;
   opacity: 0.59;
+  border-radius: 10.5px;
+
+  box-sizing: border-box;
+  display: block;
+}
+
+.innerProgress {
+  max-width: 100%;
+  height: 11px;
+  background: #3bde7c;
   border-radius: 10.5px;
 }
 
@@ -204,9 +234,16 @@ export default {
   border: 6px solid yellow;
 }
 
+.numbersWrap {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+}
 .numbers {
   color: black;
   display: flex;
+  justify-content: space-evenly;
   width: 100%;
 }
 
@@ -215,6 +252,9 @@ export default {
   height: 4px;
   background: #f2f3f3;
   opacity: 0.15;
+  margin-bottom: 22px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .numbers > img {
@@ -228,11 +268,10 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 15px;
 }
 
 .numbercellActive {
-  border: 6px solid yellow;
+  border: 6px solid #ffc700;
 }
 
 .imageContainer {
@@ -260,8 +299,6 @@ export default {
 #answer {
   width: auto;
   height: 100%;
-  padding-top: 18px;
-  padding-bottom: 18px;
 }
 
 .round {
