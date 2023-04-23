@@ -1,5 +1,7 @@
 <template>
   <div class="testPage">
+    <div class="progressBar" />
+
     <div v-if="selectedPage" class="question">{{ selectedPage.title }}</div>
 
     <div v-if="selectedPage.image" class="imageContainer">
@@ -154,6 +156,20 @@ export default {
   .testpage {
     height: 570px;
   }
+}
+
+.progressBar {
+  width: 100%;
+  max-width: inherit;
+  max-height: ;
+  height: 11px;
+  padding: 17px 30px;
+  display: block;
+  position: relative;
+  background: #f2f3f3;
+  mix-blend-mode: normal;
+  opacity: 0.59;
+  border-radius: 10.5px;
 }
 
 .question {
