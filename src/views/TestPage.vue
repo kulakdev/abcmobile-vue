@@ -157,7 +157,15 @@ export default {
 }
 
 .question {
-  font-size: 20;
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #ffffff;
 }
 
 .grid {
