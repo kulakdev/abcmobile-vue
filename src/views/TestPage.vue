@@ -4,7 +4,7 @@
       <div v-if="selectedPage" class="progressBar">
         <div
           class="innerProgress"
-          :style="`width: ` + [(state.currentIndex / state.people.length) * 100] + `%`"
+          :style="`width: ` + [(state.currentIndex / (state.people.length - 1)) * 100] + `%`"
         ></div>
       </div>
 
@@ -59,7 +59,26 @@
         ></div>
       </div>
 
-      <div class="buttonComponent">
+      <div v-if="selectedPage.rgrid" class="grid">
+        <div
+          tabindex="0"
+          v-for="(cell, index) in selectedPage.grid"
+          class="cell"
+          :key="index"
+          :style="`background-color:` + cell"
+          @click="setSelectedCell(cell)"
+        ></div>
+      </div>
+
+      <div v-if="selectedPage.animation">
+        <AnimatedLoading />
+        <div
+          class="deleteThisDEBUGonly"
+          style="width: 320px; height: 200px; background-color: green"
+        />
+      </div>
+
+      <div v-if="!selectedPage.noButton" class="buttonComponent">
         <ButtonComponent text="Next" @click="incrementIndex" :disabled="!state.selectedCell" />
       </div>
     </div>
@@ -68,20 +87,21 @@
 
 <script lang="ts">
 import ButtonComponent from '@/components/ButtonComponent.vue'
+import AnimatedLoading from '@/components/icons/AnimatedLoading.vue'
 import { reactive, computed } from 'vue'
 
 export default {
   data() {
     const state = reactive({
-      currentIndex: 6,
+      currentIndex: 0,
       answers: [],
       selectedCell: '',
+      shouldMount: false,
       people: [
         { title: 'Ваш пол:', list: ['Мужчина', 'Женщина'] },
         {
           title: 'Укажите ваш возраст',
-          list: ['До 18', 'От 18 до 28', 'От 29 до 35', 'От 36'],
-          image: 'src/assets/brain.webp'
+          list: ['До 18', 'От 18 до 28', 'От 29 до 35', 'От 36']
         },
         { title: 'Выбери лишнее:', list: ['Дом', 'Шалаш', 'Бунгало', 'Скамейка', 'Хижина'] },
         {
@@ -91,6 +111,20 @@ export default {
         {
           title: 'Выберите цвет, который сейчас наиболее Вам приятен:',
           grid: ['gray', 'blue', 'green', 'orangered', 'yellow', 'brown', 'black', 'purple', 'teal']
+        },
+        {
+          title: 'Выберите цвет, который сейчас наиболее Вам приятен:',
+          rgrid: [
+            'gray',
+            'blue',
+            'green',
+            'orangered',
+            'yellow',
+            'brown',
+            'black',
+            'purple',
+            'teal'
+          ]
         },
         {
           title: 'Какой из городов лишний?',
@@ -113,7 +147,8 @@ export default {
           title: 'Вставьте подходящее число',
           image: 'src/assets/star.jpg',
           numbers: ['34', '36', '53', '44', '66', '42']
-        }
+        },
+        { title: 'Обработка результатов', animation: 'true', noButton: 'true' }
       ]
     })
 
@@ -152,7 +187,7 @@ export default {
       selectedCell: state.selectedCell
     }
   },
-  components: { ButtonComponent }
+  components: { ButtonComponent, AnimatedLoading }
 }
 </script>
 
