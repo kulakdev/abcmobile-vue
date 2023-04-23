@@ -27,6 +27,7 @@
         tabindex="0"
         v-for="(cell, index) in selectedPage.numbers"
         class="numbercell"
+        :class="{ numbercellActive: state.selectedCell == index }"
         :key="index"
         :style="`background-color:` + cell"
         @click="setSelectedCell(index)"
@@ -206,22 +207,8 @@ export default {
   margin: 0 15px;
 }
 
-.invisible-radio {
+.numbercellActive {
   border: 6px solid yellow;
-  /* appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-color: transparent;
-  border: none;
-  outline: none; */
-}
-
-.active {
-  border: 6px solid yellow;
-}
-
-.passive {
-  border: 6px solid green;
 }
 
 .imageContainer {
