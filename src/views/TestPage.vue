@@ -62,7 +62,7 @@
       <div v-if="selectedPage.rgrid" class="grid">
         <div
           tabindex="0"
-          v-for="(cell, index) in selectedPage.grid"
+          v-for="(cell, index) in selectedPage.rgrid"
           class="cell"
           :key="index"
           :style="`background-color:` + cell"
@@ -93,8 +93,9 @@ import { reactive, computed } from 'vue'
 export default {
   data() {
     const state = reactive({
-      currentIndex: 0,
+      currentIndex: 4,
       answers: [],
+      randomizedArr: [],
       selectedCell: '',
       shouldMount: false,
       people: [
@@ -113,17 +114,18 @@ export default {
           grid: ['gray', 'blue', 'green', 'orangered', 'yellow', 'brown', 'black', 'purple', 'teal']
         },
         {
-          title: 'Выберите цвет, который сейчас наиболее Вам приятен:',
+          title:
+            'Отдохните пару секунд, еще раз Выберите цвет, который сейчас наиболее Вам приятен:',
           rgrid: [
             'gray',
-            'blue',
-            'green',
-            'orangered',
-            'yellow',
+            'teal',
             'brown',
+            'green',
             'black',
+            'orangered',
             'purple',
-            'teal'
+            'yellow',
+            'blue'
           ]
         },
         {
@@ -158,6 +160,10 @@ export default {
       }
     })
 
+    const randomizedArr = () => {
+      state.selectedPage.rgrid.sort(() => 0.5 - Math.random())
+    }
+
     const incrementIndex = () => {
       if (state.currentIndex < state.people.length - 1) {
         state.answers.push(state.selectedCell)
@@ -184,6 +190,7 @@ export default {
       incrementIndex,
       setSelectedCell,
       answerStyle,
+      randomizedArr,
       selectedCell: state.selectedCell
     }
   },
