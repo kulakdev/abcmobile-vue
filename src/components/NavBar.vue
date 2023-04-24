@@ -92,6 +92,7 @@ export default defineComponent({
   height: 16px;
   margin-left: 15px;
   margin-top: 17px;
+<<<<<<< HEAD
 }
 
 .showComponent {
