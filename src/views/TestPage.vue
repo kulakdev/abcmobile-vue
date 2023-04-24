@@ -160,10 +160,6 @@ export default {
       }
     })
 
-    const randomizedArr = () => {
-      state.selectedPage.rgrid.sort(() => 0.5 - Math.random())
-    }
-
     const incrementIndex = () => {
       if (state.currentIndex < state.people.length - 1) {
         state.answers.push(state.selectedCell)
@@ -190,7 +186,7 @@ export default {
       incrementIndex,
       setSelectedCell,
       answerStyle,
-      randomizedArr,
+
       selectedCell: state.selectedCell
     }
   },
