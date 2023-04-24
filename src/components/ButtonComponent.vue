@@ -44,4 +44,11 @@ export default {
   box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
 }
+
+.buttonStyle:disabled {
+  background: #dadada;
+  color: #8e8e8e;
+  box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
 </style>
