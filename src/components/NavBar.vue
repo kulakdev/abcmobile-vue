@@ -1,7 +1,6 @@
 <script lang="ts">
 import MenuIcon from './icons/MenuIcon.vue'
-
-<<<<<<< HEAD
+import { RouterLink, RouterView } from 'vue-router'
 import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
@@ -16,28 +15,37 @@ export default defineComponent({
 
     return {
       myBoolean,
-      toggleComponent
+      toggleComponent,
+      RouterLink,
+      RouterView
+    }
+  },
+  computed: {
+    showComponent() {
+      return this.$route.path === '/test'
     }
   }
 })
-=======
-export default {
-  name: 'NavBar',
-  components: { MenuIcon }
-}
->>>>>>> 29c88725e9f93199437dfd7a0fce43dacc8e106d
 </script>
 
 <template>
   <div class="navbar">
-<<<<<<< HEAD
     <a class="button" @click="toggleComponent">
-=======
-    <a class="button">
->>>>>>> 29c88725e9f93199437dfd7a0fce43dacc8e106d
       <MenuIcon />
     </a>
-    <p style="color: aqua; font-size: medium">{{ myBoolean }}</p>
+    <!-- This is for debugging purposes -->
+    <!-- <p style="color: aqua; font-size: medium">{{ myBoolean }}</p> -->
+    <!--  -->
+    <!-- I was thinking of a more smarter way of doing this, the idea was to use -->
+    <!-- a listener on a parent, and emmitter on child in order to pass the <img/> and <p> -->
+    <!-- from child to parent, so that in case we have multiple pages, all of which -->
+    <!-- have their own images and paragraphs, BUT this sounds like poorly allocated time -->
+    <!-- considering this app only has 2 screens -->
+    <span v-if="showComponent" class="showComponent">
+      <img src="src/assets/brain.webp" />
+      <p class="textGold">Тест на определение IQ</p>
+    </span>
+    <slot></slot>
     <a
       style="
         position: absolute;
@@ -45,7 +53,6 @@ export default {
         height: max-content;
         min-width: fit-content;
         margin: 0;
-
         z-index: 10;
         display: flex;
         justify-content: center;
@@ -63,11 +70,13 @@ export default {
       </div>
     </a>
     <div v-if="!myBoolean" class="menu">
-      <a href="#landing" class="item textWhite" @click="toggleComponent">Главная</a>
-      <a href="#quote" class="item textWhite" @click="toggleComponent">Информация о тесте</a>
-      <a href="/about" class="item textGold" @click="toggleComponent">Пройти тест</a>
+      <a href="/#landing" class="item textWhite" @click="toggleComponent">Главная</a>
+      <a href="/#quote" class="item textWhite" @click="toggleComponent">Информация о тесте</a>
+      <RouterLink to="/test" class="item textGold" @click="toggleComponent">Пройти тест</RouterLink>
     </div>
   </div>
+
+  <RouterView />
 </template>
 
 <style>
@@ -87,8 +96,32 @@ export default {
   height: 16px;
   margin-left: 15px;
   margin-top: 17px;
-<<<<<<< HEAD
 }
+
+.showComponent {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.showComponent > img {
+  max-width: 46px;
+  margin-left: 9px;
+  margin-right: 9px;
+}
+
+.showComponent > p {
+  font-family: 'Yeseva One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  color: #ffc700;
+}
+
 .iconX {
   position: absolute;
   top: calc(50% - 0.5mm);
@@ -129,8 +162,6 @@ export default {
   display: flex;
   flex-direction: column;
   padding: 110px 24px;
-=======
->>>>>>> 29c88725e9f93199437dfd7a0fce43dacc8e106d
 }
 
 .item {
