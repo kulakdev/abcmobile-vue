@@ -3,7 +3,12 @@ import ButtonComponent from './ButtonComponent.vue'
 
 export default {
   name: 'LandingPage',
-  components: { ButtonComponent }
+  components: { ButtonComponent },
+  methods: {
+    goToTest() {
+      this.$router.push({ path: '/test' })
+    }
+  }
 }
 </script>
 
@@ -16,7 +21,7 @@ export default {
         <div class="blurryBg" />
         <div class="imageStyle" />
       </div>
-      <ButtonComponent text="ПРОЙТИ ТЕСТ" class="buttonStyle"></ButtonComponent>
+      <ButtonComponent text="ПРОЙТИ ТЕСТ" class="buttonStyle" @click="goToTest"></ButtonComponent>
       <h2 class="textGold">
         и получите рекомендации по развитию своего интеллекта
         <span class="textWhite" style="display: block"

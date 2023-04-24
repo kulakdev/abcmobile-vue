@@ -9,7 +9,7 @@
       которая принесет вам скорейший финансовый результат.
     </p>
     <img class="imageElement" src="src/assets/brains.webp" />
-    <ButtonComponent text="ПРОЙТИ ТЕСТ" />
+    <ButtonComponent text="ПРОЙТИ ТЕСТ" @click="goToTest" />
   </div>
 </template>
 
@@ -18,7 +18,12 @@ import ButtonComponent from './ButtonComponent.vue'
 
 export default {
   name: 'ScreenTwo',
-  components: { ButtonComponent }
+  components: { ButtonComponent },
+  methods: {
+    goToTest() {
+      this.$router.push({ path: '/test' })
+    }
+  }
 }
 </script>
 

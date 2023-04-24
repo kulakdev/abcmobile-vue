@@ -95,7 +95,7 @@ import { reactive, computed } from 'vue'
 export default {
   data() {
     const state = reactive({
-      currentIndex: 10,
+      currentIndex: 0,
       answers: [],
       randomizedArr: [],
       selectedCell: '',

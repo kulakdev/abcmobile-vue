@@ -13,7 +13,7 @@
       >
     </div>
     <div class="buttonTransparent">
-      <ButtonTransparent text="ПРОЙТИ ТЕСТ" />
+      <ButtonTransparent text="ПРОЙТИ ТЕСТ" @click="goToTest" />
     </div>
     <div class="copyright">© 2023 :P</div>
   </div>
@@ -24,7 +24,12 @@ import ButtonTransparent from './ButtonTransparent.vue'
 
 export default {
   name: 'ScreenThree',
-  components: { ButtonTransparent }
+  components: { ButtonTransparent },
+  methods: {
+    goToTest() {
+      this.$router.push({ path: '/test' })
+    }
+  }
 }
 </script>
 
