@@ -72,9 +72,10 @@
 
       <div v-if="selectedPage.animation">
         <AnimatedLoading />
+        <AnimatedLoadingText />
         <div
           class="deleteThisDEBUGonly"
-          style="width: 320px; height: 200px; background-color: green"
+          style="width: 320px; height: 200px; background-color: transparent"
         />
       </div>
 
@@ -88,12 +89,13 @@
 <script lang="ts">
 import ButtonComponent from '@/components/ButtonComponent.vue'
 import AnimatedLoading from '@/components/icons/AnimatedLoading.vue'
+import AnimatedLoadingText from '@/components/AnimatedLoadingText.vue'
 import { reactive, computed } from 'vue'
 
 export default {
   data() {
     const state = reactive({
-      currentIndex: 4,
+      currentIndex: 10,
       answers: [],
       randomizedArr: [],
       selectedCell: '',
@@ -190,7 +192,7 @@ export default {
       selectedCell: state.selectedCell
     }
   },
-  components: { ButtonComponent, AnimatedLoading }
+  components: { ButtonComponent, AnimatedLoading, AnimatedLoadingText }
 }
 </script>
 
