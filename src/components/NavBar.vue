@@ -20,8 +20,11 @@ export default defineComponent({
     }
   },
   computed: {
-    showComponent() {
+    showComponentTest() {
       return this.$route.path === '/test'
+    },
+    showComponentFinale() {
+      return this.$route.path === '/finale'
     }
   }
 })
@@ -40,10 +43,15 @@ export default defineComponent({
     <!-- from child to parent, so that in case we have multiple pages, all of which -->
     <!-- have their own images and paragraphs, BUT this sounds like poorly allocated time -->
     <!-- considering this app only has 2 screens -->
-    <span v-if="showComponent" class="showComponent">
+    <span v-if="showComponentTest" class="showComponent">
       <img src="src/assets/brain.webp" />
-      <p class="textGold">Тест на определение IQ</p>
+      <p class="textGold testText">Тест на определение IQ</p>
     </span>
+
+    <span v-if="showComponentFinale" class="showComponent"
+      ><img src="src/assets/brain.webp" />
+      <p class="textGold finaleText">Готово!</p></span
+    >
     <a
       style="
         position: absolute;
@@ -106,7 +114,7 @@ export default defineComponent({
   margin-right: 9px;
 }
 
-.showComponent > p {
+.testText {
   font-family: 'Yeseva One';
   font-style: normal;
   font-weight: 400;
@@ -115,6 +123,18 @@ export default defineComponent({
   letter-spacing: 0.05em;
   text-transform: uppercase;
 
+  color: #ffc700;
+}
+
+.finaleText {
+  font-family: 'Yeseva One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-left: 25px;
   color: #ffc700;
 }
 
@@ -128,18 +148,6 @@ export default defineComponent({
   max-width: 46px;
   margin-left: 9px;
   margin-right: 9px;
-}
-
-.showComponent > p {
-  font-family: 'Yeseva One';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-
-  color: #ffc700;
 }
 
 .iconX {
