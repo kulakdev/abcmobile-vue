@@ -70,6 +70,8 @@
         ></div>
       </div>
 
+      <!-- Page switch is happening inside <AnimatedLoading/> component -->
+
       <div v-if="selectedPage.animation">
         <AnimatedLoading />
         <AnimatedLoadingText />
@@ -210,12 +212,15 @@ export default {
 }
 .testPageOverlay {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: url('src/assets/space.webp');
 }
 
 @media (min-width: 576px) {
   .testPage {
+    height: 570px;
+  }
+  .testPageOverlay {
     height: 570px;
   }
 }

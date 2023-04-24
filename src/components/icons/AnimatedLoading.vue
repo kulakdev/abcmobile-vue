@@ -221,7 +221,7 @@
 <script>
 export default {
   mounted() {
-    setTimeout(() => this.$router.push({ path: '/' }), 5000)
+    setTimeout(() => this.$router.push({ path: '/finale' }), 5000)
   }
 }
 </script>
