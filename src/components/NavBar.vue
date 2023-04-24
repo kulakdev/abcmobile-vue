@@ -1,6 +1,6 @@
 <script lang="ts">
 import MenuIcon from './icons/MenuIcon.vue'
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink } from 'vue-router'
 import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
@@ -16,8 +16,7 @@ export default defineComponent({
     return {
       myBoolean,
       toggleComponent,
-      RouterLink,
-      RouterView
+      RouterLink
     }
   },
   computed: {
@@ -74,8 +73,6 @@ export default defineComponent({
       <RouterLink to="/test" class="item textGold" @click="toggleComponent">Пройти тест</RouterLink>
     </div>
   </div>
-
-  <RouterView />
 </template>
 
 <style>
